@@ -20,6 +20,6 @@ body::before {
     top: 0;
     bottom: 0;
     z-index: -1;
-    background: url(../img/zoomby.jpg) center / cover no-repeat;
+    background: url(../img/zoomby.jpg) left / cover no-repeat;
     transition: 0.3s;
 }
