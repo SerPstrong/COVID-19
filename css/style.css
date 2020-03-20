@@ -5,11 +5,14 @@
 
 .cont_position{
     text-align: center;
-    color: #fff;
 }
 
 .block_text{
     margin: 50% 0 0 0;
+}
+
+body, a {
+    color: #fff;
 }
 
 body::before {
@@ -26,8 +29,13 @@ body::before {
 }
 
 .a_btn {
-    color: #fff;
     margin: 30px;
     display: inline-block;
     font-size: 32px;
+}
+
+.cont {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
 }
