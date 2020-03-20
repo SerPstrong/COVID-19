@@ -39,3 +39,7 @@ body::before {
     height: 100px;
     background-color: aqua;
 }
+
+.background_share {
+    display: none;
+}
