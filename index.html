@@ -13,15 +13,24 @@
 
 <div class="container">
     <div class="cont_position">
-    <div class="block_text">Укажите колличество дней для расчета заразившихся</div>
-    <form class="form_block">
-        <input id="input_number" type="text" size="30">
-        <button id="button_number" type="submit">РАССЧИТАТЬ</button>
-    </form>
+        <div class="block_text">Укажите колличество дней для расчета заразившихся</div>
+        <form class="form_block">
+            <input id="input_number" type="text" size="30">
+            <button id="button_number" type="submit">РАССЧИТАТЬ</button>
+        </form>
 
-    <div id="result"></div>
-
+        <div id="result"></div>
         <a class="a_btn" href="https://yandex.ru/maps/covid19" target="_blank">Смотреть на карте</a>
+
+        <div class="block_share">
+            <div class="dlock_share-text">поделиться с друзьями:</div>
+
+            <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+            <script src="https://yastatic.net/share2/share.js"></script>
+            <div class="ya-share2"
+                 data-services="collections,vkontakte,facebook,odnoklassniki,moimir,twitter,reddit,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+
+        </div>
     </div>
 </div>
 <script src="js/script.js"></script>
