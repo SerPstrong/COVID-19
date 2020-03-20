@@ -1,0 +1,26 @@
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cont_position{
+    text-align: center;
+}
+
+.block_text{
+    margin: 50% 0 0 0;
+}
+
+body::before {
+    content: '';
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url(../img/zoomby.jpg) center / cover no-repeat;
+    filter: blur(5px);
+    transition: 0.3s;
+}
