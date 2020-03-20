@@ -24,3 +24,10 @@ body::before {
     background: url(../img/zoomby.jpg) left / cover no-repeat;
     transition: 0.3s;
 }
+
+.a_btn {
+    color: #fff;
+    margin: 30px;
+    display: inline-block;
+    font-size: 32px;
+}
