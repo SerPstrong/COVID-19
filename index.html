@@ -9,6 +9,7 @@
     <meta name="description" content="Расчет заражения населения России">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://use.fontawesome.com/fd004859d8.js"></script>
 </head>
 <body>
 
@@ -21,13 +22,14 @@
 <img class="background_share" src="img/zoomby.jpg" alt="Коронавирус">
 <div class="container">
     <div class="cont_position">
+
         <div class="block_text">Укажите количество дней для расчета заразившихся</div>
         <form class="form_block">
             <input id="input_number" type="text" size="30">
             <button id="button_number" type="submit">РАССЧИТАТЬ</button>
         </form>
 
-        <div id="result"></div>
+
         <a class="a_btn" href="https://yandex.ru/maps/covid19" target="_blank">Смотреть на карте</a>
 
         <div class="block_share">
@@ -42,64 +44,12 @@
         <iframe class="frame_youtube" width="400px" height="200px" src="https://www.youtube.com/embed/Sq91Lw7s1LA"
                 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-
-        <div class="resBlock">
-        <script>
-            function render() {
-                const arrHumans = [1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306];
-                const arrComparePercent = [];
-
-                let i = 0;
-                let k = 0; // берем с 10 индекса arrComparePercent = []
-
-                let compare = 0;
-                let difference = 0;
-                let difference2 = 0;
-                let insCont = 0;
-
-                let inputNumber = document.getElementById("input_number").value;
-                // let buttonNumber = document.getElementsByClassName("button_number");
-
-                for (; i < arrHumans.length; i++) {
-                    difference = arrHumans[i] - compare;
-                    difference2 = Math.floor(100 / compare * difference);
-                    arrComparePercent.push(difference2);
-                    document.write("День № " + i + " колличество зараженных " + arrHumans[i] + ", возросло на " + difference2 + "% " + "<br><br>");
-                    compare = arrHumans[i];
-                }
-
-                document.write(" <br>" + "Прогноз на основе предыдущих данных" + "<br><br>");
-                let humans = arrHumans[arrHumans.length - 1];
-                humans += resultFunc(humans);
-
-
-                for (; i <= 100; i++) {
-                    let y = Math.floor(humans);
-                    humans += resultFunc(humans);
-                    document.write("День № " + i + " колличество зараженных " + y +", возросло на " + difference2 + "% " + "<br><br>");
-                }
-
-                function resultFunc(x) {
-                    return humans / 100 * difference2;
-                }
-
-                function funcResult(x) {
-                    return insCont / insCont;
-                }
-
-                // document.getElementById('result').innerHTML = html;
-            }
-
-            render();
-
-            // document.getElementById('button_number').addEventListener('click', render);
-
-
-        </script>
-        </div>
     </div>
+        <div id="result"></div>
+
+
 
 </div>
-<!--<script src="js/script.js"></script>-->
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,43 +1,61 @@
 function render() {
-    const arrHumans = [1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253];
+    const arrHumans = [1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306];
     const arrComparePercent = [];
+
+    let result = document.getElementById("result");
+    let resultCom;
 
     let i = 0;
     let k = 0; // берем с 10 индекса arrComparePercent = []
 
     let compare = 0;
-    let difference = 0;
-    let difference2 = 0;
+    let difference;
+    let difference2;
     let insCont = 0;
+    let html;
+    let iResult;
 
     let inputNumber = document.getElementById("input_number").value;
-    // let buttonNumber = document.getElementsByClassName("button_number");
 
     for (; i < arrHumans.length; i++) {
         difference = arrHumans[i] - compare;
         difference2 = Math.floor(100 / compare * difference);
         arrComparePercent.push(difference2);
-        document.write("День № " + i + " колличество зараженных " + arrHumans[i] + " возросло на " + difference2 + " процентов " + "<br>");
         compare = arrHumans[i];
+        funcIResult();
+        resultCom += `<div class="resBlock">День № <span class="color-number">${i}</span> колличество зараженных <span class="color-number">${arrHumans[i]}</span>  ${iResult} <span class="color-number"> ${difference2}%</span></div>`;
     }
 
-    document.write(" <br>" + "Прогноз на основе предыдущих данных" + "<br><br>");
+    resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
+    result.innerHTML += resultCom;
+
     let humans = arrHumans[arrHumans.length - 1];
     humans += resultFunc(humans);
 
-
-    for (; i <= 55; i++) {
+    for (; i <= 100; i++) {
         let y = Math.floor(humans);
         humans += resultFunc(humans);
-        document.write("День № " + i + " колличество зараженных " + y + "<br>");
+        resultCom += `<div class="resBlock">День № <span class="color-number">${i}</span> колличество зараженных <span class="color-number">${y}</span></div>`;
     }
 
+    result.innerHTML = resultCom;
+
     function resultFunc(x) {
-        return humans / 100 * 30;
+        return humans / 100 * difference2;
     }
 
     function funcResult(x) {
         return insCont / insCont;
+    }
+
+    function funcIResult() {
+        if (arrComparePercent[arrComparePercent.length-1] > arrComparePercent[arrComparePercent.length-2]) {
+            return iResult = `<i class="fa fa-arrow-up" aria-hidden="true"></i>`
+        }else if (arrComparePercent[arrComparePercent.length-1] < arrComparePercent[arrComparePercent.length-2]) {
+            return iResult = `<i class="fa fa-arrow-down" aria-hidden="true"></i>`
+        }else {
+            return iResult = `<i class="fa fa-arrow-right" aria-hidden="true"></i>`
+        }
     }
 
     // document.getElementById('result').innerHTML = html;
