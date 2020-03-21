@@ -1,13 +1,13 @@
-.container{
+.container {
     max-width: 960px;
     margin: 0 auto;
 }
 
-.cont_position{
+.cont_position {
     text-align: center;
 }
 
-.block_text{
+.block_text {
     margin: 50% 0 0 0;
 }
 
@@ -46,4 +46,9 @@ body::before {
 
 .frame_youtube {
     margin: 30px 0 0 0;
+}
+
+.resBlock {
+    margin: 30px 0 0 0;
+    font-size: 30px;
 }
