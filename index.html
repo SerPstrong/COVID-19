@@ -57,7 +57,7 @@
                     difference = arrHumans[i] - compare;
                     difference2 = Math.floor(100 / compare * difference);
                     arrComparePercent.push(difference2);
-                    document.write("День № " + i + " колличество зараженных " + arrHumans[i] + " возросло на " + difference2 + " процентов " + "<br>");
+                    document.write("День № " + i + " колличество зараженных " + arrHumans[i] + " возросло на " + difference2 + " процентов " + "<br><br>");
                     compare = arrHumans[i];
                 }
 
@@ -69,7 +69,7 @@
                 for (; i <= 69; i++) {
                     let y = Math.floor(humans);
                     humans += resultFunc(humans);
-                    document.write("День № " + i + " колличество зараженных " + y + "<br>");
+                    document.write("День № " + i + " колличество зараженных " + y + "<br><br>");
                 }
 
                 function resultFunc(x) {
