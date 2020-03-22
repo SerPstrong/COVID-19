@@ -64,6 +64,25 @@ body::before {
     margin: 0 20px 0 20px;
 }
 
+.pos {
+    display: flex;
+    justify-content: center;
+}
+
+.i-fa-speed {
+    animation: blink 300ms alternate infinite;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
 /*video*/
 .a_btn {
     margin: 30px;
