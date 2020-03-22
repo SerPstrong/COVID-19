@@ -3,6 +3,7 @@ function render() {
     const arrComparePercent = [];
 
     let result = document.getElementById("result");
+    let resultTop = document.getElementById("result_top");
     let resultCom = "";
 
     let i = 1;
@@ -25,6 +26,8 @@ function render() {
         funcIResult();
         resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
+
+    let iToday = i;
 
     resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
     result.innerHTML += resultCom;
@@ -58,20 +61,22 @@ function render() {
         }
     }
     // document.getElementById('result').innerHTML = html;
+
+    function sec() {
+        let today = new Date().toLocaleDateString();
+        let todayTime = new Date().toLocaleTimeString();
+        // document.querySelector('.date-footer').innerHTML = `${today} ${todayTime}`;
+        resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today} ${todayTime}</span> 
+кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+    }
+    setInterval(sec, 1000);
+
+
 }
 
 render();
 
 // document.getElementById('button_number').addEventListener('click', render);
-
-getElement('http://ru.stackoverflow.com', '#nav-questions', function(element) {
-    console.log(element);
-});
-
-getElement('http://ru.stackoverflow.com', '.question-hyperlink', function(element) {
-    console.log(element.innerHTML);
-});
-
 
 
 

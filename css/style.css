@@ -9,7 +9,7 @@
 }
 
 .block_text {
-    margin: 50% 0 0 0;
+    margin: 20% 0 0 0;
 }
 
 body, a {
@@ -95,6 +95,9 @@ body::before {
     }
 }
 
+#result_top {
+    margin: 200px 0 0 0;
+}
 
 /*video*/
 .a_btn {
