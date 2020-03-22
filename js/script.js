@@ -67,7 +67,9 @@ function render() {
         let today = new Date().toLocaleDateString();
         let todayTime = new Date().toLocaleTimeString();
         // document.querySelector('.date-footer').innerHTML = `${today} ${todayTime}`;
-        resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today} ${todayTime}</span> 
+        resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
+</span> <span class="color-number">${todayTime}</span>
+<br>  
 кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
 
