@@ -64,3 +64,17 @@ render();
 
 // document.getElementById('button_number').addEventListener('click', render);
 
+getElement('http://ru.stackoverflow.com', '#nav-questions', function(element) {
+    console.log(element);
+});
+
+getElement('http://ru.stackoverflow.com', '.question-hyperlink', function(element) {
+    console.log(element.innerHTML);
+});
+
+
+
+
+
+
+
