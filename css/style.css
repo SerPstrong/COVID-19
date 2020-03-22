@@ -99,6 +99,10 @@ body::before {
     margin: 200px 0 0 0;
 }
 
+#result_top img {
+    width: 45px;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
@@ -151,7 +155,6 @@ body::before {
     min-width: 100%;
     min-height: 100%;
 }
-
 /*/video*/
 
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 function render() {
-    const arrHumans = [" " , 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367];
+    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367];
     const arrComparePercent = [];
 
     let result = document.getElementById("result");
@@ -60,6 +60,7 @@ function render() {
             return iResult = `<i class="fa fa-arrow-right" aria-hidden="true"></i>`
         }
     }
+
     // document.getElementById('result').innerHTML = html;
 
     function sec() {
@@ -69,6 +70,7 @@ function render() {
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today} ${todayTime}</span> 
 кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
+
     setInterval(sec, 1000);
 
 
