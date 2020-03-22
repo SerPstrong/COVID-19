@@ -23,7 +23,7 @@ function render() {
         arrComparePercent.push(difference2);
         compare = arrHumans[i];
         funcIResult();
-        resultCom += `<div class="resBlock">День № <span class="color-number">${i}</span> количество зараженных <span class="color-number">${arrHumans[i]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
 
     resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
@@ -35,7 +35,7 @@ function render() {
     for (; i <= 100; i++) {
         let y = Math.floor(humans);
         humans += resultFunc(humans);
-        resultCom += `<div class="resBlock">День № <span class="color-number">${i}</span> количество зараженных <span class="color-number">${y}</span></div>`;
+        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
     }
 
     result.innerHTML = resultCom;
