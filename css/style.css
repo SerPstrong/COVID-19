@@ -87,7 +87,7 @@ body::before {
 .color-number {
     color: #ff0061;
     background-color: #00000069;
-    padding: 6px;
+    padding: 0 6px 0 6px;
 }
 
 .h1 {
@@ -105,6 +105,11 @@ body::before {
 .fa-arrow-down {
     font-size: 44px;
     color: #00ea09;
+}
+
+.fa-arrow-right {
+    font-size: 44px;
+    color: #fff;
 }
 
 /*/video*/
