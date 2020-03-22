@@ -27,7 +27,7 @@ function render() {
         resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
 
-    let iToday = i;
+    let iToday = i-1;
 
     resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
     result.innerHTML += resultCom;
