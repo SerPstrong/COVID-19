@@ -25,7 +25,7 @@ body::before {
     top: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url(../img/zoomby.jpg), linear-gradient(45deg, #ff0000, #3bff00);
+    /*background-image: url(../img/zoomby.jpg), linear-gradient(45deg, #ff0000, #3bff00);*/
     transition: 0.3s;
     background-blend-mode: color-burn;
     background-repeat: no-repeat;
