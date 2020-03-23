@@ -1,5 +1,5 @@
 function render() {
-    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367];
+    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438];
     const arrComparePercent = [];
 
     let result = document.getElementById("result");
