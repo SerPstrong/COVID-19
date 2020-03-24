@@ -24,7 +24,7 @@ function render() {
         arrComparePercent.push(difference2);
         compare = arrHumans[i];
         funcIResult();
-        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
 
     let iToday = i - 1;
@@ -45,10 +45,6 @@ function render() {
 
     function resultFunc(x) {
         return humans / 100 * difference2;
-    }
-
-    function funcResult(x) {
-        return insCont / insCont;
     }
 
     function funcIResult() {
