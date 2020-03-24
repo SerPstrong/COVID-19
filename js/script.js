@@ -35,7 +35,7 @@ function render() {
     let humans = arrHumans[arrHumans.length - 1];
     humans += resultFunc(humans);
 
-    for (; i <= 100; i++) {
+    for (; i <= 120; i++) {
         let y = Math.floor(humans);
         humans += resultFunc(humans);
         resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
