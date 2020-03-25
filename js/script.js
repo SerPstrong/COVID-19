@@ -80,18 +80,49 @@ function render() {
 кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
 
 
-
     }
+
     setInterval(sec, 1000);
     // setTimeout(sec, 1000);
 }
 
-render();
 
 // document.getElementById('button_number').addEventListener('click', render);
+render();
 
 
+//chartjs
 
+let arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306];
 
+// this.data.datasets[0].data = arrHumans;
 
+let ctx = document.getElementById('myChart').getContext('2d');
+let myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+        datasets: [{
+            label: 'кол-во зараженных',
+            data: [1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495],
+            backgroundColor: [
+                'rgba(0, 0, 0, 0.1)',
+            ],
+            borderColor: [
+                '#ff0061',
+            ],
+            borderWidth: 4,
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
+// console.log(myChart.data.datasets[0].data);
