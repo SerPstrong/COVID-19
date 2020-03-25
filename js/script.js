@@ -41,7 +41,8 @@ function render() {
         if (humans <= 9000000000) {
             let y = Math.floor(humans);
             humans += resultFunc(humans);
-            resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
+            // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
+            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number">${y}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
