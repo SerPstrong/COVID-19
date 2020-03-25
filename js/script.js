@@ -84,7 +84,7 @@ function render() {
 <br>
 кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span>
 <br>
-До полного заражения осталось <span class="color-number">${leftBeforeInfection}</span> дней</div>`;
+дней до ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
 
 
     }
