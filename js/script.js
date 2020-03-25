@@ -1,6 +1,7 @@
 function render() {
     const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658];
     const arrComparePercent = [];
+    let leftBeforeInfection = 0;
 
     let result = document.getElementById("result");
     let resultTop = document.getElementById("result_top");
@@ -39,6 +40,12 @@ function render() {
         let y = Math.floor(humans);
         humans += resultFunc(humans);
         resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
+
+        if (y > 140000000 && leftBeforeInfection === 0 ) {
+            leftBeforeInfection = i;
+        } else {
+            leftBeforeInfection = i;
+        }
     }
 
     result.innerHTML = resultCom;
@@ -77,7 +84,9 @@ function render() {
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
 <br>
-кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span>
+<br>
+До полного заражения осталось <span class="color-number">${leftBeforeInfection}</span> дней</div>`;
 
 
     }
