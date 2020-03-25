@@ -40,6 +40,7 @@ body::before {
     position: relative;
     margin: 2px;
     display: inline-block;
+    border: solid 1px #ff006161;
 }
 
 .h1 {
