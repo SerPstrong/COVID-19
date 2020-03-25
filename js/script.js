@@ -36,14 +36,12 @@ function render() {
     let humans = arrHumans[arrHumans.length - 1];
     humans += resultFunc(humans);
 
-    for (; i <= 120; i++) {
+    for (; i <= 150; i++) {
         let y = Math.floor(humans);
         humans += resultFunc(humans);
         resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
 
         if (y > 140000000 && leftBeforeInfection === 0 ) {
-            leftBeforeInfection = i;
-        } else {
             leftBeforeInfection = i;
         }
     }
