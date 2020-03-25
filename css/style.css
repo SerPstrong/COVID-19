@@ -107,6 +107,12 @@ body::before {
     width: 45px;
 }
 
+.footer {
+    height: 200px;
+    background-color: #00000061;
+    margin: 100px 0 0 0;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
