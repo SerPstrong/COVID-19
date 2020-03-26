@@ -58,16 +58,16 @@ body::before {
 
 .fa-arrow-down {
     font-size: 44px;
-    color: #00ea09;
+    color: #ff006178;;
 }
 
 .fa-arrow-right {
     font-size: 44px;
-    color: #fff;
+    color: #ff006178;;
 }
 
 #result {
-    margin: 0 20px 0 20px;
+    margin: 100px 20px 0 20px;
     text-align: center;
 }
 
@@ -103,6 +103,7 @@ body::before {
 
 #result_top {
     margin: 200px 0 0 0;
+    text-transform: uppercase;
 }
 
 #result_top img {
@@ -113,6 +114,9 @@ body::before {
     height: 200px;
     background-color: #00000061;
     margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .resBlock_abs {
@@ -146,12 +150,27 @@ body::before {
     padding: 20px;
 }
 
+.block_share {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dlock_share-text {
+    margin: 0 10px 0 0;
+    font-size: 20px;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
     display: inline-block;
     font-size: 32px;
     color: #007bff;
+    text-shadow: -2px 2px 2px #000;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .cont {
