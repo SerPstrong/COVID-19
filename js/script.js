@@ -93,7 +93,7 @@ function render() {
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
 <br>
-КЗ <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
+Заражений <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
 <br>Выздоровлений <span class="color-number recovered_color">${recovered}</span> 
 <br>Смертей <span class="color-number">${deaths}</span> 
 <br>Cвердловская обл. <span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
