@@ -46,7 +46,7 @@ body::before {
 .h1 {
     color: red;
     text-align: center;
-    margin: 40px 0 40px 0;
+    margin: 60px 0 0 0;
     text-shadow: 1px 1px 1px #fff;
 }
 
@@ -125,6 +125,11 @@ body::before {
     z-index: 1;
     left: -10px;
     font-size: 20px;
+}
+
+.recovered_color {
+    color: #00ea09;
+    border: solid 1px #00ea095e;
 }
 
 /*video*/

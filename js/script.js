@@ -1,5 +1,6 @@
 function render() {
     const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658];
+    let recovered = 29;
     const arrComparePercent = [];
     let leftBeforeInfection = 0;
 
@@ -86,7 +87,8 @@ function render() {
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
 <br>
-кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span>
+кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
+<br>выздоровлений <span class="color-number recovered_color">${recovered}</span> 
 <br>
 дней до ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
 
