@@ -1,9 +1,11 @@
 function render() {
-    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658];
-    let recovered = 29;
+    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840];
+    let recovered = 38; //выздоровлений
+    let deaths = 2; // смертей
+    let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
+
     const arrComparePercent = [];
     let leftBeforeInfection = 0;
-
     let result = document.getElementById("result");
     let resultTop = document.getElementById("result_top");
     let resultCom = "";
@@ -26,7 +28,7 @@ function render() {
         arrComparePercent.push(difference2);
         compare = arrHumans[i];
         funcIResult();
-        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
     }
 
     let iToday = i - 1;
@@ -34,6 +36,7 @@ function render() {
     resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
     result.innerHTML += resultCom;
 
+    // let humans = arrHumans[arrHumans.length - 1];
     let humans = arrHumans[arrHumans.length - 1];
     humans += resultFunc(humans);
 
@@ -87,8 +90,10 @@ function render() {
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
 <br>
-кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
-<br>выздоровлений <span class="color-number recovered_color">${recovered}</span> 
+КЗ <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
+<br>Выздоровлений <span class="color-number recovered_color">${recovered}</span> 
+<br>Смертей <span class="color-number">${deaths}</span> 
+<br>Активные <span class="color-number">${active}</span> 
 <br>
 дней до ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
 
