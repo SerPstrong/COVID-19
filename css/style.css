@@ -68,6 +68,7 @@ body::before {
 
 #result {
     margin: 0 20px 0 20px;
+    text-align: center;
 }
 
 .pos {
@@ -122,9 +123,9 @@ body::before {
 
 .color-number_small {
     position: absolute;
-    top: -8px;
+    top: 6px;
     z-index: 1;
-    left: -10px;
+    left: 8px;
     font-size: 20px;
 }
 
@@ -133,11 +134,24 @@ body::before {
     border: solid 1px #00ea095e;
 }
 
+.color-number_small_bottom-right {
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+    right: 6px;
+    font-size: 20px;
+}
+
+.color-number_bot {
+    padding: 20px;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
     display: inline-block;
     font-size: 32px;
+    color: #007bff;
 }
 
 .cont {

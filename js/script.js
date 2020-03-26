@@ -22,6 +22,7 @@ function render() {
     let insCont = 1;
     // let html;
     let iResult = 1;
+    let dif = 0;
 
     // let inputNumber = document.getElementById("input_number").value;
 
@@ -47,9 +48,11 @@ function render() {
 
         if (humans <= 9000000000) {
             let y = Math.floor(humans);
+            dif = humans;
             humans += resultFunc(humans);
+            dif = Math.floor(humans - dif);
             // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
-            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number">${y}</span></div>`;
+            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number color-number_bot">${y}</span><span class="color-number_small_bottom-right">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
@@ -99,7 +102,7 @@ function render() {
 <br>Cвердловская обл. <span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
 <br>Активные <span class="color-number">${active}</span> 
 <br>
-дней до ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
+До ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
 
     }
 
