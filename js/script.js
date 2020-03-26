@@ -2,7 +2,10 @@ function render() {
     const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840];
     let recovered = 38; //выздоровлений
     let deaths = 2; // смертей
+    let sverdlRegion = 20;
+    let sverdlRegionRecovered = 3;
     let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
+
 
     const arrComparePercent = [];
     let leftBeforeInfection = 0;
@@ -93,6 +96,7 @@ function render() {
 КЗ <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span>
 <br>Выздоровлений <span class="color-number recovered_color">${recovered}</span> 
 <br>Смертей <span class="color-number">${deaths}</span> 
+<br>Cвердловская обл. <span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
 <br>Активные <span class="color-number">${active}</span> 
 <br>
 дней до ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
