@@ -170,7 +170,7 @@ body::before {
 .span-flex {
     display: flex;
     justify-content: center;
-    width: 25%;
+    width: 55%;
 }
 
 .color-number_size {
@@ -203,7 +203,7 @@ body::before {
 }
 
 .resBlock {
-    font-size: 30px;
+    font-size:19px
 
 }
 

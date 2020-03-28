@@ -94,6 +94,10 @@ function render() {
         let today = new Date().toLocaleDateString();
         let todayTime = new Date().toLocaleTimeString();
 
+        for (countRes = 0; countRes > 0; countRes++) {
+
+        }
+
         resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
 <br>
