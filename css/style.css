@@ -162,6 +162,21 @@ body::before {
     font-size: 20px;
 }
 
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.span-flex {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.color-number_size {
+    width: 100%;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
@@ -184,12 +199,12 @@ body::before {
 }
 
 .frame_youtube {
-    margin: 30px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 .resBlock {
-    margin-top: 10px;
     font-size: 30px;
+
 }
 
 .overlay {

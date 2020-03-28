@@ -26,18 +26,20 @@ function render() {
 
     // let inputNumber = document.getElementById("input_number").value;
 
+    resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">ДЕНЬ</span></div><div class="span-flex"><span class="color-number color-number_size">ЗАРАЖЕНИЙ</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
     for (; i < arrHumans.length; i++) {
         difference = arrHumans[i] - compare;
         difference2 = Math.floor(100 / compare * difference);
         arrComparePercent.push(difference2);
         compare = arrHumans[i];
         funcIResult();
-        resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+        //resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
+        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${i}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]} (+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
     }
 
     let iToday = i - 1;
 
-    resultCom += `<h1 class="h1">Расчет на основе предыдущих данных</h1>`;
+    resultCom += `<h1 class="h1">РнОПД</h1>`;
     result.innerHTML += resultCom;
 
     // let humans = arrHumans[arrHumans.length - 1];
@@ -45,13 +47,12 @@ function render() {
     humans += resultFunc(humans);
 
     for (; i <= 150; i++) {
-
         if (humans <= 9000000000) {
             let y = Math.floor(humans);
             dif = humans;
             humans += resultFunc(humans);
             dif = Math.floor(humans - dif);
-            // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зараженных <span class="color-number">${y}</span></div>`;
+            // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зар-ных <span class="color-number">${y}</span></div>`;
             resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number color-number_bot">${y}</span><span class="color-number_small_bottom-right">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
