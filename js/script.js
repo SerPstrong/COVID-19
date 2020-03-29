@@ -1,9 +1,9 @@
 function render() {
-    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264];
-    let recovered = 49; //выздоровлений
-    let deaths = 5; // смертей
+    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534];
+    let recovered = 64; //выздоровлений
+    let deaths = 8; // смертей
     let sverdlRegion = 24;
-    let sverdlRegionRecovered = 3;
+    let sverdlRegionRecovered = 1;
     let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 
 
