@@ -122,7 +122,7 @@ body::before {
 .resBlock_abs {
     display: inline-block;
     position: relative;
-    margin: 0 0 0 20px;
+    margin: 0 0 0 0;
 }
 
 .color-number_small {
@@ -162,6 +162,21 @@ body::before {
     font-size: 20px;
 }
 
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.span-flex {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+}
+
+.color-number_size {
+    width: 100%;
+}
+
 /*video*/
 .a_btn {
     margin: 30px;
@@ -184,19 +199,19 @@ body::before {
 }
 
 .frame_youtube {
-    margin: 30px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 .resBlock {
-    margin-top: 10px;
-    font-size: 30px;
+    font-size:19px
+
 }
 
 .overlay {
     width: 100%;
     height: 100%;
     display: block;
-    filter: opacity(0.7);
+    filter: opacity(0.5);
 }
 
 #nubexDiv {
@@ -207,6 +222,7 @@ body::before {
     position: fixed;
     overflow: hidden;
     z-index: -1;
+    filter: blur(5px);
 }
 
 #nubexVideo {
