@@ -1,4 +1,3 @@
-
 const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548];
 let recovered = 235; //выздоровлений
 let deaths = 30; // смертей
@@ -24,7 +23,7 @@ let insCont = 1;
 let iResult = 1;
 let dif = 0;
 
-function render() {
+render = () => {
     // let inputNumber = document.getElementById("input_number").value;
 
     resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">ДЕНЬ</span></div><div class="span-flex"><span class="color-number color-number_size">ЗАРАЖЕНИЙ</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
