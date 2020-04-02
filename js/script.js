@@ -92,7 +92,7 @@ render = () => {
     let hCount = 0;
     let countHuSum = 1;
 
-    for (; hCount < 20; hCount++) {
+    for (; hCount < 26; hCount++) {
         countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
         countHuSum++
     }
@@ -121,7 +121,7 @@ render = () => {
 
     setInterval(sec, 1000);
     // setTimeout(sec, 1000);
-}
+};
 
 // document.getElementById('button_number').addEventListener('click', render);
 render();
