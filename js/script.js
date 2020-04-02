@@ -37,6 +37,16 @@ render = () => {
         resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${i}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]} (+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
     }
 
+    let countHumansSum = 0;
+    let hCount = 0;
+    let countHuSum = 1;
+
+    for (; hCount < 14; hCount++) {
+        countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
+        countHuSum++
+    }
+    countHumansSum = Math.floor(countHumansSum / hCount);
+
     let iToday = i - 1;
 
     resultCom += `<h1 class="h1">РнаОПД</h1>`;
@@ -61,8 +71,12 @@ render = () => {
 
     result.innerHTML = resultCom;
 
+    // function resultFunc(x) {
+    //     return humans / 100 * difference2;
+    // }
+
     function resultFunc(x) {
-        return humans / 100 * difference2;
+        return humans / 100 * countHumansSum;
     }
 
     function funcIResult() {
@@ -74,29 +88,6 @@ render = () => {
             return iResult = `<i class="fa fa-arrow-right" aria-hidden="true"></i>`
         }
     }
-
-    // document.getElementById('result').innerHTML = html;
-
-    // function sec() {
-    //     let today = new Date().toLocaleDateString();
-    //     let todayTime = new Date().toLocaleTimeString();
-    //     // document.querySelector('.date-footer').innerHTML = `${today} ${todayTime}`;
-    //     resultTop.insertAdjacentHTML('afterend', `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>\n
-    //         </span> <span class="color-number">${todayTime}</span>
-    //         <br>
-    //         кол-во зараженных <span class="color-number">${arrHumans[arrHumans.length - 1]}</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`);
-    // }
-    // setInterval(sec, 1000);
-
-    let countHumansSum = 0;
-    let hCount = 0;
-    let countHuSum = 1;
-
-    for (; hCount < 26; hCount++) {
-        countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
-        countHuSum++
-    }
-    countHumansSum = Math.floor(countHumansSum / hCount);
 
     function sec() {
         let today = new Date().toLocaleDateString();
