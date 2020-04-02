@@ -1,11 +1,11 @@
 function render() {
-    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534, 1836];
-    let recovered = 66; //выздоровлений
-    let deaths = 9; // смертей
-    let sverdlRegion = 24;
+    const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548];
+    let recovered = 235; //выздоровлений
+    let deaths = 30; // смертей
+    let sverdlRegion = 38;
     let sverdlRegionRecovered = 1;
-    let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 
+    let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 
     const arrComparePercent = [];
     let leftBeforeInfection = 0;
@@ -39,18 +39,16 @@ function render() {
 
     let iToday = i - 1;
 
-    resultCom += `<h1 class="h1">РнОПД</h1>`;
+    resultCom += `<h1 class="h1">РнаОПД</h1>`;
     result.innerHTML += resultCom;
 
-    // let humans = arrHumans[arrHumans.length - 1];
     let humans = arrHumans[arrHumans.length - 1];
-    humans += resultFunc(humans);
 
     for (; i <= 150; i++) {
         if (humans <= 9000000000) {
-            let y = Math.floor(humans);
             dif = humans;
             humans += resultFunc(humans);
+            let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
             // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зар-ных <span class="color-number">${y}</span></div>`;
             resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number color-number_bot">${y}</span><span class="color-number_small_bottom-right">+${dif}</span></div>`;
