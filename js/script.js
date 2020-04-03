@@ -1,8 +1,8 @@
-const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548];
-let recovered = 235; //выздоровлений
-let deaths = 30; // смертей
-let sverdlRegion = 38;
-let sverdlRegionRecovered = 1;
+const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367, 438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149];
+let recovered = 281; //выздоровлений
+let deaths = 34; // смертей
+let sverdlRegion = 39;
+let sverdlRegionRecovered = 8;
 
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 
