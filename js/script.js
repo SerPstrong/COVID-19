@@ -25,9 +25,8 @@ let iResult = 1;
 let dif = 0;
 
 render = () => {
-    // let inputNumber = document.getElementById("input_number").value;
 
-    resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">ДЕНЬ</span></div><div class="span-flex"><span class="color-number color-number_size">ЗАРАЖЕНИЙ</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
+    // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">ДЕНЬ</span></div><div class="span-flex"><span class="color-number color-number_size">ЗАРАЖЕНИЙ</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
     for (; i < arrHumans.length; i++) {
         difference = arrHumans[i] - compare;
         difference2 = Math.floor(100 / compare * difference);
@@ -61,7 +60,6 @@ render = () => {
             humans += resultFunc(humans);
             let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
-            // resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> кол-во зар-ных <span class="color-number">${y}</span></div>`;
             resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number color-number_bot">${y}</span><span class="color-number_small_bottom-right">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
@@ -71,10 +69,6 @@ render = () => {
     }
 
     result.innerHTML = resultCom;
-
-    // function resultFunc(x) {
-    //     return humans / 100 * difference2;
-    // }
 
     function resultFunc(x) {
         return humans / 100 * countHumansSum;
@@ -94,26 +88,63 @@ render = () => {
         let today = new Date().toLocaleDateString();
         let todayTime = new Date().toLocaleTimeString();
 
-        for (countRes = 0; countRes > 0; countRes++) {
+        resultTop.innerHTML = `
+<div class="res_top_flex_left">
+<div>
+<div class="res_top_text">день</div>
+</div>
+<div>
+<div class="res_top_text">Зар.</div>
+</div>
+<div>
+<div class="res_top_text">средний</div>
+</div>
+<div>
+<div class="res_top_text">Выздор.</div>
+</div>
+<div>
+<div class="res_top_text">Смерт.</div>
+</div>
+<div>
+<div class="res_top_text">Cвердл. обл.</div>
+</div>
+<div>
+<div class="res_top_text">Актив.</div>
+</div>
+<div>
+<div class="res_top_text">До ПЗ</div>
+</div>
+</div>
 
-        }
-
-        resultTop.innerHTML = `<div class="resBlock">Сегодня <span class="color-number">${iToday} </span> день <span class="color-number">${today}</span>
+<div class="res_top_flex_right">
+<div>
+<span class="color-number">${iToday}</span><span class="color-number">${today}</span>
 </span> <span class="color-number">${todayTime}</span>
-<br>
-Заражений <span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%)</span> средний<span class="color-number">(${countHumansSum}%)</span>
-<br>Выздоровлений <span class="color-number recovered_color">${recovered}</span> 
-<br>Смертей <span class="color-number">${deaths}</span> 
-<br>Cвердловская обл. <span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
-<br>Активные <span class="color-number">${active}</span> 
-<br>
-До ПЗ <span class="color-number">${leftBeforeInfection}</span></div>`;
+</div>
+<div>
+<span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span><span class="color-number">${iResult} ${difference2}%)</span>
+</div>
+<div>
+<span class="color-number">(${countHumansSum}%)</span>
+</div>
+<div>
+<span class="color-number recovered_color">${recovered}</span> 
+</div>
+<div>
+<span class="color-number">${deaths}</span> 
+</div>
+<div>
+<span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
+</div>
+<div>
+<span class="color-number">${active}</span> 
+</div>
+<div>
+<span class="color-number">${leftBeforeInfection}</span>
+</div></div>`;
 
     }
-
-    setInterval(sec, 1000);
-    // setTimeout(sec, 1000);
+    setTimeout(sec, 1000);
 };
 
-// document.getElementById('button_number').addEventListener('click', render);
 render();

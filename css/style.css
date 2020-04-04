@@ -102,8 +102,33 @@ body::before {
 }
 
 #result_top {
-    margin: 200px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.res_top_flex_left {
+    margin: 200px 0 0 auto;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.res_top_flex_right {
+    margin: 200px auto 0 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.res_top_flex_left div, .res_top_flex_right div {
+    display: flex;
+    align-items: center;
+}
+
+.res_top_text {
+    margin: 3px;
 }
 
 #result_top img {
