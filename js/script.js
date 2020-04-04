@@ -122,10 +122,10 @@ render = () => {
 </span> <span class="color-number">${todayTime}</span>
 </div>
 <div>
-<span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span><span class="color-number">${iResult} ${difference2}%)</span>
+<span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span><span class="color-number">${iResult} ${difference2}%</span>
 </div>
 <div>
-<span class="color-number">(${countHumansSum}%)</span>
+<span class="color-number">${countHumansSum}%</span>
 </div>
 <div>
 <span class="color-number recovered_color">${recovered}</span> 
