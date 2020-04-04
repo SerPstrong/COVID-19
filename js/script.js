@@ -144,7 +144,7 @@ render = () => {
 </div></div>`;
 
     }
-    setTimeout(sec, 1000);
+    setInterval(sec, 1000);
 };
 
 render();
