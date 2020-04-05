@@ -41,7 +41,7 @@ render = () => {
     let hCount = 0;
     let countHuSum = 1;
 
-    for (; hCount < 14; hCount++) {
+    for (; hCount < 7; hCount++) {
         countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
         countHuSum++
     }
