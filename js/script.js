@@ -4,25 +4,19 @@ let recovered = 355; //выздоровлений
 let deaths = 45; // смертей
 let sverdlRegion = 40;
 let sverdlRegionRecovered = 13;
-
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
-
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
 let result = document.getElementById("result");
 let resultTop = document.getElementById("result_top");
 let resultCom = "";
-
 let i = 1;
-let k = 0; // берем с 10 индекса arrComparePercent = []
-
 let compare = 1;
 let difference = 1;
 let difference2 = 1;
-let insCont = 1;
-// let html;
 let iResult = 1;
 let dif = 0;
+let numberOfDays = 7; // количество дней для среднего %
 
 render = () => {
 
@@ -41,7 +35,7 @@ render = () => {
     let hCount = 0;
     let countHuSum = 1;
 
-    for (; hCount < 7; hCount++) {
+    for (; hCount < numberOfDays; hCount++) {
         countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
         countHuSum++
     }
@@ -97,7 +91,7 @@ render = () => {
 <div class="res_top_text">Зар.</div>
 </div>
 <div>
-<div class="res_top_text">средний</div>
+<div class="res_top_text">средний за <span style="color: #ff0061; margin: 0 3px 0 3px;"> ${numberOfDays} </span> дней</div>
 </div>
 <div>
 <div class="res_top_text">Выздор.</div>
@@ -144,7 +138,55 @@ render = () => {
 </div></div>`;
 
     }
+
     setInterval(sec, 1000);
 };
-
 render();
+
+
+let backVideo = document.getElementById("nubexDiv");
+let intFlag = true;
+let setInt;
+
+// intervalVideo();
+
+function intervalVideo() {
+    if (intFlag === true) {
+        backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
+        <source src="img/earch.mp4">
+    </video>`;
+    } else {
+        backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
+        <source src="img/COVID-19.mp4">
+    </video>`;
+    }
+
+    intFlag = funcFlag();
+    setInt = funcInt();
+
+    function funcInt() {
+        if (setInt === undefined) {
+            return setInt = 21000;
+        } else if (setInt === 3500) {
+            return setInt = 21000;
+        } else {
+            return setInt = 3500;
+        }
+    }
+
+    setTimeout(intervalVideo, setInt);
+
+    function funcFlag() {
+        if (intFlag === null) {
+            return intFlag = false;
+        }
+        if (intFlag === true) {
+            return intFlag = false;
+        }
+        if (intFlag === false) {
+            return intFlag = true;
+        }
+    }
+}
+
+intervalVideo();

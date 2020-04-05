@@ -104,10 +104,11 @@ body::before {
 #result_top {
     display: flex;
     align-items: center;
+    margin: 200px 0 0 0;
 }
 
 .res_top_flex_left {
-    margin: 200px 0 0 auto;
+    margin: 0 0 0 auto;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -115,7 +116,7 @@ body::before {
 }
 
 .res_top_flex_right {
-    margin: 200px auto 0 0;
+    margin: 0 auto 0 0;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -193,13 +194,11 @@ body::before {
 }
 
 .span-flex {
-    display: flex;
-    justify-content: center;
-    width: 55%;
+    width: 150px;
 }
 
 .color-number_size {
-    width: 100%;
+    width: 133px;
 }
 
 /*video*/
