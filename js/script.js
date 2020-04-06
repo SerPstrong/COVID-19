@@ -213,11 +213,11 @@ function intervalVideo() {
 
     function funcInt() {
         if (setInt === undefined) {
-            return setInt = 20000;
+            return setInt = 3500;
         } else if (setInt === 3500) {
             return setInt = 20000;
         } else {
-            return setInt = 3500;
+            return setInt = 20000;
         }
     }
 
