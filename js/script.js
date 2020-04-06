@@ -212,10 +212,12 @@ function intervalVideo() {
     setInt = funcInt();
 
     function funcInt() {
-        if (intFlag === 1) {
+        if (setInt === undefined) {
+            return setInt = 20000;
+        } else if (intFlag === 1) {
             return setInt = 60000;
         } else if (intFlag === 2) {
-            return setInt = 2000;
+            return setInt = 20000;
         } else {
             return setInt = 3500;
         }
@@ -226,14 +228,11 @@ function intervalVideo() {
     function funcFlag() {
         if (intFlag === undefined) {
             return intFlag = 1;
-        }
-        if (intFlag === 1) {
+        } else if (intFlag === 1) {
             return intFlag = 2;
-        }
-        if (intFlag === 2) {
+        } else if (intFlag === 2) {
             return intFlag = 3;
-        }
-        if (intFlag === 3) {
+        } else if (intFlag === 3) {
             return intFlag = 1;
         }
     }
