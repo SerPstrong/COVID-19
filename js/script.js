@@ -190,7 +190,7 @@ render();
 // intervalVideo();
 
 let backVideo = document.getElementById("nubexDiv");
-let intFlag;
+let intFlag = 1;
 let setInt;
 
 function intervalVideo() {
@@ -204,7 +204,7 @@ function intervalVideo() {
     </video>`;
     } else if (intFlag === 3) {
         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
-        <source src="img/Putin.mp4">
+        <source src="img/en.mp4">
     </video>`;
     }
 
@@ -212,12 +212,12 @@ function intervalVideo() {
     setInt = funcInt();
 
     function funcInt() {
-        if (setInt === undefined) {
-            return setInt = 3500;
-        } else if (setInt === 3500) {
-            return setInt = 20000;
+        if (intFlag === 1) {
+            return setInt = 60000;
+        } else if (intFlag === 2) {
+            return setInt = 2000;
         } else {
-            return setInt = 20000;
+            return setInt = 3500;
         }
     }
 
