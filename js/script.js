@@ -1,8 +1,8 @@
 const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367,
-    438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149, 4731, 5389];
-let recovered = 355; //выздоровлений
-let deaths = 45; // смертей
-let sverdlRegion = 40;
+    438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149, 4731, 5389, 6343];
+let recovered = 406; //выздоровлений
+let deaths = 47; // смертей
+let sverdlRegion = 44;
 let sverdlRegionRecovered = 13;
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
@@ -144,18 +144,67 @@ render = () => {
 render();
 
 
+// let backVideo = document.getElementById("nubexDiv");
+// let intFlag = true;
+// let setInt;
+//
+// function intervalVideo() {
+//     if (intFlag === true) {
+//         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
+//         <source src="img/earch.mp4">
+//     </video>`;
+//     } else {
+//         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
+//         <source src="img/COVID-19.mp4">
+//     </video>`;
+//     }
+//
+//     intFlag = funcFlag();
+//     setInt = funcInt();
+//
+//     function funcInt() {
+//         if (setInt === undefined) {
+//             return setInt = 20000;
+//         } else if (setInt === 3500) {
+//             return setInt = 20000;
+//         } else {
+//             return setInt = 3500;
+//         }
+//     }
+//
+//     setTimeout(intervalVideo, setInt);
+//
+//     function funcFlag() {
+//         if (intFlag === null) {
+//             return intFlag = false;
+//         }
+//         if (intFlag === true) {
+//             return intFlag = false;
+//         }
+//         if (intFlag === false) {
+//             return intFlag = true;
+//         }
+//     }
+// }
+//
+// intervalVideo();
+
 let backVideo = document.getElementById("nubexDiv");
-let intFlag = true;
+let intFlag;
 let setInt;
 
 function intervalVideo() {
-    if (intFlag === true) {
+    if (intFlag === 1) {
         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
         <source src="img/earch.mp4">
     </video>`;
-    } else {
+    } else if (intFlag === 2) {
         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
         <source src="img/COVID-19.mp4">
+    </video>`;
+    } else if (intFlag === 3) {
+        backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
+        <source src="img/Putin.mp4">
     </video>`;
     }
 
@@ -175,14 +224,17 @@ function intervalVideo() {
     setTimeout(intervalVideo, setInt);
 
     function funcFlag() {
-        if (intFlag === null) {
-            return intFlag = false;
+        if (intFlag === undefined) {
+            return intFlag = 1;
         }
-        if (intFlag === true) {
-            return intFlag = false;
+        if (intFlag === 1) {
+            return intFlag = 2;
         }
-        if (intFlag === false) {
-            return intFlag = true;
+        if (intFlag === 2) {
+            return intFlag = 3;
+        }
+        if (intFlag === 3) {
+            return intFlag = 1;
         }
     }
 }
