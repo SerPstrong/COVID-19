@@ -36,11 +36,11 @@
     </div>
 
     <audio src="media/chechnya.mp3" autoplay="autoplay"></audio>
-    <img class="img_speaker" src="img/speaker.png" onclick="soundClick()"></img>
+    <img class="img_speaker" src="img/speaker.png" onclick="soundClick()">
     <script>
         function soundClick() {
             var audio = new Audio(); // Создаём новый элемент Audio
-            audio.src = 'click.mp3'; // Указываем путь к звуку "клика"
+            audio.src = 'media/chechnya.mp3'; // Указываем путь к звуку "клика"
             audio.autoplay = true; // Автоматически запускаем
         }
     </script>
