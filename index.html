@@ -56,7 +56,7 @@
             } else {
                 document.querySelector('.img_speaker').classList.remove('img_speaker__anim');
                 let audio = new Audio();
-                audio.autoplay = false;
+                audio.media.paused = true;
                 flagSpeak = true;
             }
         };
