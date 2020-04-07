@@ -105,6 +105,17 @@ body::before {
     }
 }
 
+@keyframes speak {
+    to {
+        width: 140px;
+        opacity: 0;
+    }
+    from {
+        width: 180px;
+        opacity: 1;
+    }
+}
+
 #result_top {
     display: flex;
     align-items: center;
@@ -220,10 +231,19 @@ body::before {
     left: 0px;
 }
 
+.audio-flex {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+}
+
 .img_speaker {
     width: 140px;
-    display: block;
-    margin: 50px auto 0 auto;
+}
+
+.img_speaker__anim {
+    animation: speak 1000ms reverse infinite;
+    position: inherit;
 }
 
 /*video*/

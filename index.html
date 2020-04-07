@@ -36,12 +36,22 @@
     </div>
 
     <audio src="media/chechnya.mp3" autoplay="autoplay"></audio>
-    <img class="img_speaker" src="img/speaker.png" onclick="soundClick()">
+    <div class="audio-flex">
+        <img id="img_speaker" class="img_speaker" src="img/speaker.png" onclick="soundClick()">
+    </div>
     <script>
+
+        // let audSpeak = document.getElementsByClassName("img_speaker");
+        // audSpeak.classList.add("img_speaker__anim");
+
+        document.getElementById('img_speaker').onclick = function() {
+            document.querySelector('.img_speaker').classList.add('img_speaker__anim');
+        }
+
         function soundClick() {
-            let audio = new Audio(); // Создаём новый элемент Audio
-            audio.src = 'media/chechnya.mp3'; // Указываем путь к звуку "клика"
-            audio.autoplay = true; // Автоматически запускаем
+            let audio = new Audio();
+            audio.src = 'media/chechnya.mp3';
+            audio.autoplay = true;
         }
     </script>
 
