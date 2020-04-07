@@ -119,7 +119,7 @@ body::before {
 #result_top {
     display: flex;
     align-items: center;
-    margin: 200px 0 0 0;
+    margin: 100px 0 0 0;
 }
 
 .res_top_flex_left {
@@ -235,6 +235,7 @@ body::before {
     display: flex;
     justify-content: center;
     height: 140px;
+    margin: 100px 0 0 0;
 }
 
 .img_speaker {
