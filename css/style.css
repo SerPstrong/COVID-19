@@ -106,12 +106,14 @@ body::before {
 }
 
 @keyframes speak {
-    to {
+    0% {
         width: 140px;
+        height: 100%;
         opacity: 0;
     }
-    from {
-        width: 180px;
+    100% {
+        width: 30%;
+        height: 130%;
         opacity: 1;
     }
 }
@@ -243,7 +245,7 @@ body::before {
 }
 
 .img_speaker__anim {
-    animation: speak 1000ms reverse infinite;
+    animation: speak 500ms reverse infinite;
     position: inherit;
 }
 
