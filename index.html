@@ -29,28 +29,35 @@
 <img class="background_share" src="img/COVID-19.jpg" alt="Коронавирус">
 <div class="container">
 
-    <audio id="audioID" src="media/chechnya.mp3" value="pause" value="play"></audio>
+    <audio id="audioID" src="media/chechnya.mp3" value="pause" value="play" loop></audio>
     <div class="audio-flex">
         <img id="img_speaker" class="img_speaker" src="img/speaker.png">
     </div>
     <script>
-
-        // let audSpeak = document.getElementsByClassName("img_speaker");
-        // audSpeak.classList.add("img_speaker__anim");
-
         let flagSpeak = true;
         let audioID = document.getElementById('audioID');
+        let addRemClass = document.querySelector('.img_speaker');
+
+        // audio.src = 'mus3.mp3';
+        // let audioTime = audioID.duration;
+        // audioID.insertAdjacentText(audioTime);
 
         document.getElementById('img_speaker').onclick = function () {
             if (flagSpeak === true) {
-                document.querySelector('.img_speaker').classList.add('img_speaker__anim');
+                addRemClass.classList.add('img_speaker__anim');
                 flagSpeak = false;
                 playClip();
+                // setTimeout(stopAnimation, 26000);
             } else {
-                document.querySelector('.img_speaker').classList.remove('img_speaker__anim');
+                addRemClass.classList.remove('img_speaker__anim');
                 flagSpeak = true;
                 pauseClip();
             }
+
+            // function stopAnimation() {
+            //     addRemClass.classList.remove('img_speaker__anim');
+            //     flagSpeak = true;
+            // }
 
             function playClip() {
                 audioID.play();
@@ -59,7 +66,6 @@
             function pauseClip() {
                 audioID.pause();
             }
-
         };
     </script>
 
