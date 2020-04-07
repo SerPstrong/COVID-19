@@ -35,7 +35,7 @@
                 src="img/time.gif"></div>
     </div>
 
-    <audio id="audioID" src="media/chechnya.mp3" value="Pause" value="Play"></audio>
+    <audio id="audioID" src="media/chechnya.mp3" value="pause" value="play"></audio>
     <div class="audio-flex">
         <img id="img_speaker" class="img_speaker" src="img/speaker.png">
     </div>
@@ -45,7 +45,7 @@
         // audSpeak.classList.add("img_speaker__anim");
 
         let flagSpeak = true;
-        let audioID = document.getElementById('img_speaker');
+        let audioID = document.getElementById('audioID');
 
         document.getElementById('img_speaker').onclick = function () {
             if (flagSpeak === true) {
