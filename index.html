@@ -38,10 +38,18 @@
     <audio src="media/chechnya.mp3" autoplay="autoplay"></audio>
     <img class="img_speaker" src="img/speaker.png" onclick="soundClick()">
     <script>
+        let flagMusic = true;
+        let audio;
+
         function soundClick() {
-            var audio = new Audio(); // Создаём новый элемент Audio
-            audio.src = 'media/chechnya.mp3'; // Указываем путь к звуку "клика"
-            audio.autoplay = true; // Автоматически запускаем
+            if (flagMusic === true){
+                audio = new Audio(); // Создаём новый элемент Audio
+                audio.src = 'media/chechnya.mp3'; // Указываем путь к звуку "клика"
+                audio.autoplay = true; // Автоматически запускаем
+                flagMusic = false;
+            }
+            audio.autoplay = false; // Автоматически запускаем
+            flagMusic = true;
         }
     </script>
 
