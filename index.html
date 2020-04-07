@@ -47,9 +47,10 @@
                 audio.src = 'media/chechnya.mp3'; // Указываем путь к звуку "клика"
                 audio.autoplay = true; // Автоматически запускаем
                 flagMusic = false;
+            }else {
+                audio.autoplay = false; // Автоматически запускаем
+                flagMusic = true;
             }
-            audio.autoplay = false; // Автоматически запускаем
-            flagMusic = true;
         }
     </script>
 
