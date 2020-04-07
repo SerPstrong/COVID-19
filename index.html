@@ -51,7 +51,7 @@
                 document.querySelector('.img_speaker').classList.add('img_speaker__anim');
                 let audio = new Audio();
                 audio.src = 'media/chechnya.mp3';
-                audio.autoplay = true;
+                audio.play();
                 flagSpeak = false;
             } else {
                 document.querySelector('.img_speaker').classList.remove('img_speaker__anim');
