@@ -44,16 +44,23 @@
         // let audSpeak = document.getElementsByClassName("img_speaker");
         // audSpeak.classList.add("img_speaker__anim");
 
+        let flagSpeak = true;
+
         document.getElementById('img_speaker').onclick = function () {
-            document.querySelector('.img_speaker').classList.add('img_speaker__anim');
-            let audio = new Audio();
-            audio.src = 'media/chechnya.mp3';
-            audio.autoplay = true;
+            if (flagSpeak === true) {
+                document.querySelector('.img_speaker').classList.add('img_speaker__anim');
+                let audio = new Audio();
+                audio.src = 'media/chechnya.mp3';
+                audio.autoplay = true;
+                flagSpeak = false;
+            } else {
+                document.querySelector('.img_speaker').classList.remove('img_speaker__anim');
+                let audio = new Audio();
+                audio.src = 'media/chechnya.mp3';
+                audio.autoplay = false;
+                flagSpeak = true;
+            }
         };
-
-        function soundClick() {
-
-        }
     </script>
 
     <div class="pos">
