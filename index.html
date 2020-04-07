@@ -35,7 +35,7 @@
                 src="img/time.gif"></div>
     </div>
 
-    <audio src="media/chechnya.mp3" value="Pause" value="Play"></audio>
+    <audio id="audioID" src="media/chechnya.mp3" value="Pause" value="Play"></audio>
     <div class="audio-flex">
         <img id="img_speaker" class="img_speaker" src="img/speaker.png">
     </div>
@@ -45,20 +45,27 @@
         // audSpeak.classList.add("img_speaker__anim");
 
         let flagSpeak = true;
+        let audioID = document.getElementById('img_speaker');
 
         document.getElementById('img_speaker').onclick = function () {
             if (flagSpeak === true) {
                 document.querySelector('.img_speaker').classList.add('img_speaker__anim');
-                let audio = new Audio();
-                audio.src = 'media/chechnya.mp3';
-                audio.play();
                 flagSpeak = false;
+                playClip();
             } else {
                 document.querySelector('.img_speaker').classList.remove('img_speaker__anim');
-                let audio = new Audio();
-                audio.pause();
                 flagSpeak = true;
+                pauseClip();
             }
+
+            function playClip() {
+                audioID.play();
+            }
+
+            function pauseClip() {
+                audioID.pause();
+            }
+
         };
     </script>
 
