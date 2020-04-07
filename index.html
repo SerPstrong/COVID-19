@@ -28,11 +28,23 @@
 
 <img class="background_share" src="img/COVID-19.jpg" alt="Коронавирус">
 <div class="container">
+
     <div id="result_top">
         <div style="margin: 0 auto; display: flex; align-items: center">Загрузка коронаданных...<img
                 style="-webkit-user-select: none;margin: auto;"
                 src="img/time.gif"></div>
     </div>
+
+    <audio src="media/chechnya.mp3" autoplay="autoplay"></audio>
+    <button onclick="soundClick()">Кликни по этому тексту</button>
+    <script>
+        function soundClick() {
+            var audio = new Audio(); // Создаём новый элемент Audio
+            audio.src = 'click.mp3'; // Указываем путь к звуку "клика"
+            audio.autoplay = true; // Автоматически запускаем
+        }
+    </script>
+
     <div class="pos">
         <div id="result">Данные подгружаются</div>
     </div>

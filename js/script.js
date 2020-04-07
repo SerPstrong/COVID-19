@@ -193,6 +193,7 @@ let backVideo = document.getElementById("nubexDiv");
 let intFlag = 1;
 let setInt;
 
+
 function intervalVideo() {
     if (intFlag === 1) {
         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
@@ -239,3 +240,5 @@ function intervalVideo() {
 }
 
 intervalVideo();
+
+let backVideoSound = document.getElementById("nubexVideo");
