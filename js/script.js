@@ -239,5 +239,3 @@ function intervalVideo() {
 }
 
 intervalVideo();
-
-let backVideoSound = document.getElementById("nubexVideo");
