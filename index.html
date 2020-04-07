@@ -37,21 +37,22 @@
 
     <audio src="media/chechnya.mp3" autoplay="autoplay"></audio>
     <div class="audio-flex">
-        <img id="img_speaker" class="img_speaker" src="img/speaker.png" onclick="soundClick()">
+        <img id="img_speaker" class="img_speaker" src="img/speaker.png">
     </div>
     <script>
 
         // let audSpeak = document.getElementsByClassName("img_speaker");
         // audSpeak.classList.add("img_speaker__anim");
 
-        document.getElementById('img_speaker').onclick = function() {
+        document.getElementById('img_speaker').onclick = function () {
             document.querySelector('.img_speaker').classList.add('img_speaker__anim');
-        }
-
-        function soundClick() {
             let audio = new Audio();
             audio.src = 'media/chechnya.mp3';
             audio.autoplay = true;
+        };
+
+        function soundClick() {
+
         }
     </script>
 
