@@ -107,14 +107,13 @@ body::before {
 
 @keyframes speak {
     0% {
-        width: 140px;
-        height: 100%;
         opacity: 0;
     }
-    100% {
-        width: 30%;
-        height: 130%;
+    50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
