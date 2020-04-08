@@ -29,6 +29,40 @@
 <img class="background_share" src="img/COVID-19.jpg" alt="Коронавирус">
 <div class="container">
 
+        <div id="popap">
+            <div class="popap_block popap_block_none">
+                <div id="popap_block_close">X</div>
+                Внимание! Вся изложенная информация является сугубо ознакомительной и не подразумевает
+                принятие решений и инструкции к действиям.
+                Сайт несет ознакомительно-расчетную информацию и не является инструктивным пособием
+                для организации мероприятий вероятностно направленных для определенных действий
+                в результате наступления всевозможных обстоятельст ввиду сложившейся ситуации, а также
+                ввиду недопущения недостоверно-фальш-информационного недоразумения следует перепроверять
+                достоверность изложенной информации в подвале данного ресурса по
+                соответствующим авторитетным информационно-аналитическим порталам.
+            </div>
+            <div class="popap_block_overlay"></div>
+        </div>
+    <script>
+
+        let popapBlock = document.querySelector(".popap_block");
+        let popapOverlay = document.querySelector(".popap_block_overlay");
+        let popapBlockClose = document.querySelector("#popap_block_close");
+
+        setTimeout(setTimePopap, 10000);
+
+        function setTimePopap() {
+            popapBlock.classList.remove('popap_block_none');
+            popapOverlay.classList.add('popap_block_overlay_p');
+        }
+
+        popapBlockClose.onclick = function () {
+            popapBlock.classList.add('popap_block_none');
+            popapOverlay.classList.remove('popap_block_overlay_p');
+        }
+
+    </script>
+
     <audio id="audioID" src="media/chechnya.mp3" value="pause" value="play" loop></audio>
     <div class="audio-flex">
         <img id="img_speaker" class="img_speaker" src="img/speaker.png">
