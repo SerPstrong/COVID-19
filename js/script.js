@@ -1,9 +1,9 @@
 const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367,
-    438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149, 4731, 5389, 6343, 7492];
-let recovered = 494; //выздоровлений
-let deaths = 58; // смертей
-let sverdlRegion = 51;
-let sverdlRegionRecovered = 22;
+    438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149, 4731, 5389, 6343, 7492, 1175];
+let recovered = 580; //выздоровлений
+let deaths = 63; // смертей
+let sverdlRegion = 56;
+let sverdlRegionRecovered = 25;
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
