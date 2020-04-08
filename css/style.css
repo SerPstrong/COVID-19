@@ -281,6 +281,10 @@ body::before {
     background-color: #000;
 }
 
+#popap_block_close:hover {
+    cursor: pointer;
+}
+
 .popap_body_color {
     background-color: #000;
 }
