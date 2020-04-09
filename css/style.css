@@ -243,6 +243,11 @@ body::before {
     width: 140px;
 }
 
+.img_speaker:hover {
+    cursor: pointer;
+    width: 150px;
+}
+
 .img_speaker__anim {
     animation: speak 500ms reverse infinite;
     position: inherit;
