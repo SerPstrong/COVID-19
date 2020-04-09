@@ -279,6 +279,7 @@ body::before {
     width: 13%;
     text-align: center;
     background-color: #000;
+    color: #ff0061;
 }
 
 #popap_block_close:hover {
@@ -295,6 +296,10 @@ body::before {
     height: 100%;
     z-index: 2;
     background-color: #0000007d;
+}
+
+.img_attention {
+    width: 20px;
 }
 
 /*video*/
