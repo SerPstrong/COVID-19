@@ -3,7 +3,7 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     8672, 10131];
 let recovered = 698; //выздоровлений
 let deaths = 76; // смертей
-let sverdlRegion = 56;
+let sverdlRegion = 59;
 let sverdlRegionRecovered = 25;
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
