@@ -29,20 +29,21 @@
 <img class="background_share" src="img/COVID-19.jpg" alt="Коронавирус">
 <div class="container">
 
-        <div id="popap">
-            <div class="popap_block popap_block_none">
-                <div id="popap_block_close">X</div>
-                Внимание<img class="img_attention" src="img/attention.png" alt=""> Вся изложенная информация является сугубо ознакомительной и не подразумевает
-                принятие решений и инструкции к действиям.
-                Сайт несет ознакомительно-расчетную информацию и не является инструктивным пособием
-                для организации мероприятий вероятностно направленных для определенных действий
-                в результате наступления всевозможных обстоятельств ввиду сложившейся ситуации, а также
-                ввиду недопущения недостоверно-фальш-информационного недоразумения следует перепроверять
-                достоверность изложенной информации в подвале данного ресурса по
-                соответствующим авторитетным информационно-аналитическим порталам.
-            </div>
-            <div class="popap_block_overlay"></div>
+    <div id="popap">
+        <div class="popap_block popap_block_none">
+            <div id="popap_block_close">X</div>
+            Внимание<img class="img_attention" src="img/attention.png" alt=""> Вся изложенная информация является сугубо
+            ознакомительной и не подразумевает
+            принятие решений и инструкции к действиям.
+            Сайт несет ознакомительно-расчетную информацию и не является инструктивным пособием
+            для организации мероприятий вероятностно направленных для определенных действий
+            в результате наступления всевозможных обстоятельств ввиду сложившейся ситуации, а также
+            ввиду недопущения недостоверно-фальш-информационного недоразумения следует перепроверять
+            достоверность изложенной информации в подвале данного ресурса по
+            соответствующим авторитетным информационно-аналитическим порталам.
         </div>
+        <div class="popap_block_overlay"></div>
+    </div>
     <script>
 
         let popapBlock = document.querySelector(".popap_block");
@@ -59,7 +60,7 @@
         popapBlockClose.onclick = function () {
             popapBlock.classList.add('popap_block_none');
             popapOverlay.classList.remove('popap_block_overlay_p');
-        }
+        };
 
     </script>
 
@@ -68,39 +69,75 @@
         <img id="img_speaker" class="img_speaker" src="img/speaker.png">
     </div>
     <script>
+        // let flagSpeak = true;
+        // let audioID = document.getElementById('audioID');
+        // let addRemClass = document.querySelector('.img_speaker');
+        // let addRemID = document.querySelector('#img_speaker');
+        //
+        // addRemID.onclick = function () {
+        //     if (flagSpeak === true) {
+        //         addRemClass.classList.add('img_speaker__anim');
+        //         flagSpeak = false;
+        //         playClip();
+        //     } else {
+        //         addRemClass.classList.remove('img_speaker__anim');
+        //         flagSpeak = true;
+        //         pauseClip();
+        //     }
+        // };
+        //
+        // function playClip() {
+        //     audioID.play();
+        // }
+        //
+        // function pauseClip() {
+        //     audioID.pause();
+        // }
+        //
+        // addRemID.onmouseover = function () {
+        //     addRemClass.classList.add('img_speaker__anim');
+        //     playClip();
+        // };
+        //
+        // addRemID.onmouseout = function () {
+        //     addRemClass.classList.remove('img_speaker__anim');
+        //     pauseClip();
+        // }
+
         let flagSpeak = true;
         let audioID = document.getElementById('audioID');
         let addRemClass = document.querySelector('.img_speaker');
+        let addRemID = document.querySelector('#img_speaker');
 
-        // audio.src = 'mus3.mp3';
-        // let audioTime = audioID.duration;
-        // audioID.insertAdjacentText(audioTime);
-
-        document.getElementById('img_speaker').onclick = function () {
+        addRemID.onclick = function () {
             if (flagSpeak === true) {
                 addRemClass.classList.add('img_speaker__anim');
                 flagSpeak = false;
                 playClip();
-                // setTimeout(stopAnimation, 26000);
             } else {
                 addRemClass.classList.remove('img_speaker__anim');
                 flagSpeak = true;
                 pauseClip();
             }
-
-            // function stopAnimation() {
-            //     addRemClass.classList.remove('img_speaker__anim');
-            //     flagSpeak = true;
-            // }
-
-            function playClip() {
-                audioID.play();
-            }
-
-            function pauseClip() {
-                audioID.pause();
-            }
         };
+
+        function playClip() {
+            audioID.play();
+        }
+
+        function pauseClip() {
+            audioID.pause();
+        }
+
+        addRemID.onmouseover = function () {
+            addRemClass.classList.add('img_speaker__anim');
+            playClip();
+        };
+
+        addRemID.onmouseout = function () {
+            addRemClass.classList.remove('img_speaker__anim');
+            pauseClip();
+        }
     </script>
 
     <div id="result_top">
