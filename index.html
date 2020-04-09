@@ -131,10 +131,14 @@
 
         addRemID.onmouseover = function () {
             addRemClass.classList.add('img_speaker__anim');
+            flagSpeak = false;
             playClip();
         };
 
         addRemID.onmouseout = function () {
+            if (flagSpeak === true ){
+                return;
+            }
             addRemClass.classList.remove('img_speaker__anim');
             pauseClip();
         }
