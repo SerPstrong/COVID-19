@@ -254,8 +254,8 @@ body::before {
 }
 
 .popap_block {
-    margin: 15% 0 0 0;
-    max-width: 250px;
+    margin: 15% 15% 0 0;
+    max-width: 325px;
     text-align: justify;
     position: fixed;
     z-index: 4;
@@ -276,7 +276,7 @@ body::before {
     font-size: 33px;
     border: solid 1px #fff;
     border-radius: 50%;
-    width: 13%;
+    width: 38px;
     text-align: center;
     background-color: #000;
     color: #ff0061;
