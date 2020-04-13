@@ -17,7 +17,7 @@ let difference = 1;
 let difference2 = 1;
 let iResult = 1;
 let dif = 0;
-let numberOfDays = 7; // количество дней для среднего %
+let numberOfDays7 = 7; // количество дней для среднего %
 
 render = () => {
     resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">Ден.</span></div><div class="span-flex"><span class="color-number color-number_size">Зар.</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
@@ -35,7 +35,7 @@ render = () => {
     let hCount = 0;
     let countHuSum = 1;
 
-    for (; hCount < numberOfDays; hCount++) {
+    for (; hCount < numberOfDays7; hCount++) {
         countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
         countHuSum++
     }
@@ -91,7 +91,7 @@ render = () => {
 <div class="res_top_text">Зар.</div>
 </div>
 <div>
-<div class="res_top_text">средний за <span style="color: #ff0061; margin: 0 3px 0 3px;"> ${numberOfDays} </span> дней</div>
+<div class="res_top_text">ср.</div>
 </div>
 <div>
 <div class="res_top_text">Выздор.</div>
