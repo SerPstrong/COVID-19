@@ -210,12 +210,20 @@ body::before {
 }
 
 .span-flex {
-    width: 155px;
+    display: flex;
+    width: 33%;
+    flex-grow: 010;
+    /*background-color: #3a3a3a;*/
+    /*border: solid 1px;*/
+    justify-content: center;
+    align-items: center;
 }
 
 .color-number_size {
-    width: 140px;
+    width: 100%;
 }
+
+
 
 .tp-dottedoverlay.twoxtwo {
     background: url(../img/gridtile.png);
