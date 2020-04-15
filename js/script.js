@@ -54,7 +54,7 @@ render = () => {
             humans += resultFunc(humans);
             let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
-            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small">${i}</span><span class="color-number color-number_bot">${y}</span><span class="color-number_small_bottom-right">+${dif}</span></div>`;
+            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="номер дня">${i}</span><span class="color-number color-number_bot" title="кол-во зараженных">${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
@@ -142,52 +142,6 @@ render = () => {
     setInterval(sec, 1000);
 };
 render();
-
-
-// let backVideo = document.getElementById("nubexDiv");
-// let intFlag = true;
-// let setInt;
-//
-// function intervalVideo() {
-//     if (intFlag === true) {
-//         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
-//         <source src="img/earch.mp4">
-//     </video>`;
-//     } else {
-//         backVideo.innerHTML = `<video id="nubexVideo" loop="loop" autoplay="autoplay" preload="auto" muted="muted">
-//         <source src="img/COVID-19.mp4">
-//     </video>`;
-//     }
-//
-//     intFlag = funcFlag();
-//     setInt = funcInt();
-//
-//     function funcInt() {
-//         if (setInt === undefined) {
-//             return setInt = 20000;
-//         } else if (setInt === 3500) {
-//             return setInt = 20000;
-//         } else {
-//             return setInt = 3500;
-//         }
-//     }
-//
-//     setTimeout(intervalVideo, setInt);
-//
-//     function funcFlag() {
-//         if (intFlag === null) {
-//             return intFlag = false;
-//         }
-//         if (intFlag === true) {
-//             return intFlag = false;
-//         }
-//         if (intFlag === false) {
-//             return intFlag = true;
-//         }
-//     }
-// }
-//
-// intervalVideo();
 
 let backVideo = document.getElementById("nubexDiv");
 let intFlag = 1;
