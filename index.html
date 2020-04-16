@@ -129,6 +129,24 @@
              data-services="collections,vkontakte,facebook,odnoklassniki,moimir,twitter,reddit,evernote,linkedin,lj,tumblr,viber,whatsapp,skype,telegram"></div>
 
     </div>
+
+    <div class="stat"></div>
+    <script>
+        let stat = document.querySelector(".stat");
+
+        function statFunc(theNumberOfInfected, dead) {
+            return (dead / (theNumberOfInfected / 100)).toFixed(1)
+        }
+
+        let statWorld = statFunc(2037691, 134087)
+        let statUSA = statFunc(636350, 28154)
+        let statRussia = statFunc(27938, 232)
+        let statItaly = statFunc(165155, 21645)
+
+        stat.innerHTML = `<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Росии ${statRussia}% | в Италии ${statItaly}%`
+
+    </script>
+
 </div>
 <div class="footer">
 
@@ -137,7 +155,9 @@
         <a class="a_btn" href="https://tele.gg/stopkvirus" target="_blank">Телеграм-канал</a>
         <a class="a_btn" href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
            target="_blank">Johns Hopkins University</a>
+
     </div>
+
 
 </div>
 
