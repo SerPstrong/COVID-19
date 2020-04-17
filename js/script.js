@@ -8,9 +8,9 @@ let sverdlRegionRecovered = 47;
 let statWorld = statFunc(2160170, 145593);
 let statUSA = statFunc(671425, 33286);
 let statItaly = statFunc(168941, 22170);
-let statRussia = statFunc(27938, 232);
+let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
 
-let stat = document.querySelector(".stat");
+let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
@@ -35,6 +35,10 @@ Date.prototype.addDays = function (days) {
 
 function statFunc(theNumberOfInfected, dead) {
     return (dead / (theNumberOfInfected / 100)).toFixed(1)
+}
+
+function recoverFunc(x, y) {
+    return (y / (x / 100)).toFixed(1)
 }
 
 render = () => {
@@ -144,7 +148,7 @@ render = () => {
 <span class="color-number">${countHumansSum}%</span>
 </div>
 <div>
-<span class="color-number recovered_color">${recovered}</span> 
+<span class="color-number recovered_color">${recovered}</span><span class="color-number recovered_color">${recoverPercent}%</span>  
 </div>
 <div>
 <span class="color-number">${deaths}</span> 
