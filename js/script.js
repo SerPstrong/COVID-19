@@ -151,7 +151,7 @@ render = () => {
 <span class="color-number recovered_color">${recovered}</span><span class="color-number recovered_color">${recoverPercent}%</span>  
 </div>
 <div>
-<span class="color-number">${deaths}</span> 
+<span class="color-number">${deaths}</span><span class="color-number">${statRussia}%</span>
 </div>
 <div>
 <span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
@@ -163,7 +163,7 @@ render = () => {
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
 </div>
 <div>
-<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">IT ${statItaly}%</span><span class="color-number">RUS ${statRussia}%</span>
+<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">IT ${statItaly}%</span>
 </div>
 </div>`;
 
