@@ -172,7 +172,7 @@ body::before {
     top: 6px;
     z-index: 1;
     left: 8px;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .recovered_color {

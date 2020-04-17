@@ -42,7 +42,6 @@
         <div class="popap_block_overlay"></div>
     </div>
     <script>
-
         let popapBlock = document.querySelector(".popap_block");
         let popapOverlay = document.querySelector(".popap_block_overlay");
         let popapBlockClose = document.querySelector("#popap_block_close");
@@ -138,12 +137,23 @@
             return (dead / (theNumberOfInfected / 100)).toFixed(1)
         }
 
-        let statWorld = statFunc(2037691, 134087)
-        let statUSA = statFunc(636350, 28154)
-        let statRussia = statFunc(27938, 232)
-        let statItaly = statFunc(165155, 21645)
 
-        stat.innerHTML = `<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Росии ${statRussia}% | в Италии ${statItaly}%`
+        let statWorld = statFunc(2037691, 134087);
+        let statUSA = statFunc(636350, 28154);
+        let statRussia = statFunc(27938, 232);
+        let statItaly = statFunc(165155, 21645);
+
+        Date.prototype.addDays = function (days) {
+            let date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        };
+
+        let toDate;
+        toDate = new Date();
+
+        stat.innerHTML = `${toDate.addDays(100).toLocaleDateString()}<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Росии ${statRussia}% | в Италии ${statItaly}%`
+
 
     </script>
 
