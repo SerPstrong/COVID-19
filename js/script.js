@@ -159,7 +159,7 @@ render = () => {
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
 </div>
 <div>
-<span class="color-number"><i class="fas fa-globe"></i>W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">IT ${statItaly}%</span><span class="color-number">RUS ${statRussia}%</span>
+<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">IT ${statItaly}%</span><span class="color-number">RUS ${statRussia}%</span>
 </div>
 </div>`;
 
