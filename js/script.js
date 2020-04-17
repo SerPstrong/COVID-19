@@ -28,7 +28,7 @@ Date.prototype.addDays = function (days) {
 };
 
 render = () => {
-    resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">Д.</span></div><div class="span-flex"><span class="color-number color-number_size">Зар.</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
+    // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">Д.</span></div><div class="span-flex"><span class="color-number color-number_size">Зар.</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
     for (; i < arrHumans.length; i++) {
         difference = arrHumans[i] - compare;
         difference2 = Math.floor(100 / compare * difference);
