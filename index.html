@@ -143,16 +143,7 @@
         let statRussia = statFunc(27938, 232);
         let statItaly = statFunc(165155, 21645);
 
-        Date.prototype.addDays = function (days) {
-            let date = new Date(this.valueOf());
-            date.setDate(date.getDate() + days);
-            return date;
-        };
-
-        let toDate;
-        toDate = new Date();
-
-        stat.innerHTML = `${toDate.addDays(100).toLocaleDateString()}<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Росии ${statRussia}% | в Италии ${statItaly}%`
+        stat.innerHTML = `<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Росии ${statRussia}% | в Италии ${statItaly}%`
 
 
     </script>
