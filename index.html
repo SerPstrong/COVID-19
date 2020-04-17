@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script src="https://use.fontawesome.com/fd004859d8.js"></script>
+    <link href="css/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 </head>
@@ -130,36 +131,15 @@
     </div>
 
     <div class="stat"></div>
-    <script>
-        let stat = document.querySelector(".stat");
-
-        function statFunc(theNumberOfInfected, dead) {
-            return (dead / (theNumberOfInfected / 100)).toFixed(1)
-        }
-
-
-        let statWorld = statFunc(2160170, 145593);
-        let statUSA = statFunc(671425, 33286);
-        let statItaly = statFunc(168941, 22170);
-        let statRussia = statFunc(27938, 232);
-
-        stat.innerHTML = `<div>См-ть</div>в мире ${statWorld}% | в США ${statUSA}% | в Италии ${statItaly}% | в Росии ${statRussia}%`
-
-
-    </script>
 
 </div>
 <div class="footer">
-
     <div class="footer_a">
         <a class="a_btn" href="https://yandex.ru/maps/covid19" target="_blank">Смотреть на карте</a>
         <a class="a_btn" href="https://tele.gg/stopkvirus" target="_blank">Телеграм-канал</a>
         <a class="a_btn" href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
            target="_blank">Johns Hopkins University</a>
-
     </div>
-
-
 </div>
 
 <script src="js/script.js"></script>

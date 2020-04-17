@@ -5,6 +5,12 @@ let recovered = 2590; //выздоровлений
 let deaths = 273; // смертей
 let sverdlRegion = 115;
 let sverdlRegionRecovered = 47;
+let statWorld = statFunc(2160170, 145593);
+let statUSA = statFunc(671425, 33286);
+let statItaly = statFunc(168941, 22170);
+let statRussia = statFunc(27938, 232);
+
+let stat = document.querySelector(".stat");
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
@@ -27,6 +33,10 @@ Date.prototype.addDays = function (days) {
     return date;
 };
 
+function statFunc(theNumberOfInfected, dead) {
+    return (dead / (theNumberOfInfected / 100)).toFixed(1)
+}
+
 render = () => {
     // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">Д.</span></div><div class="span-flex"><span class="color-number color-number_size">Зар.</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
     for (; i < arrHumans.length; i++) {
@@ -36,7 +46,7 @@ render = () => {
         compare = arrHumans[i];
         funcIResult();
         //resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
-        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${toDateCovid.addDays(i-1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]} (+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
+        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]} (+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
     }
 
     let countHumansSum = 0;
@@ -62,11 +72,11 @@ render = () => {
             humans += resultFunc(humans);
             let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
-            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">${toDateCovid.addDays(i-1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
+            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
-                toDateCovidFull = toDateCovid.addDays(i-1).toLocaleDateString();
+                toDateCovidFull = toDateCovid.addDays(i - 1).toLocaleDateString();
             }
         }
     }
@@ -117,6 +127,9 @@ render = () => {
 <div>
 <div class="res_top_text">До ПЗ</div>
 </div>
+<div>
+<div class="res_top_text">см-ть</div>
+</div>
 </div>
 
 <div class="res_top_flex_right">
@@ -144,11 +157,16 @@ render = () => {
 </div>
 <div>
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
-</div></div>`;
+</div>
+<div>
+<span class="color-number"><i class="fas fa-globe"></i>W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">IT ${statItaly}%</span><span class="color-number">RUS ${statRussia}%</span>
+</div>
+</div>`;
 
     }
 
-    setInterval(sec, 1000);
+    // setInterval(sec, 1000);
+    sec();
 };
 render();
 
