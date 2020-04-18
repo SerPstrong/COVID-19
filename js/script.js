@@ -5,11 +5,13 @@ let recovered = 2590; //выздоровлений
 let deaths = 273; // смертей
 let sverdlRegion = 115;
 let sverdlRegionRecovered = 47;
+let sverdlRegionDeaths = 1;
 let statWorld = statFunc(2160170, 145593);
 let statUSA = statFunc(671425, 33286);
 let statItaly = statFunc(168941, 22170);
-let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
 
+let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
+let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
 let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
@@ -123,7 +125,7 @@ render = () => {
 <div class="res_top_text">Смерт.</div>
 </div>
 <div>
-<div class="res_top_text">Cвердл. обл.</div>
+<div class="res_top_text">Cв. обл.</div>
 </div>
 <div>
 <div class="res_top_text">Актив.</div>
@@ -154,7 +156,7 @@ render = () => {
 <span class="color-number">${deaths}</span><span class="color-number">${statRussia}%</span>
 </div>
 <div>
-<span class="color-number">${sverdlRegion}</span> <span class="color-number recovered_color">${sverdlRegionRecovered}</span>
+<span class="color-number">${sverdlRegion}</span><span class="color-number">${sverdlRegionDeaths}</span><span class="color-number">${statSverdlRegionDeaths}%</span><span class="color-number recovered_color">${sverdlRegionRecovered}</span>
 </div>
 <div>
 <span class="color-number">${active}</span> 
@@ -169,7 +171,8 @@ render = () => {
 
     }
 
-    setInterval(sec, 1000);
+    // setInterval(sec, 1000);
+    sec();
 };
 render();
 
