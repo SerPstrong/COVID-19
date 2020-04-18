@@ -10,6 +10,7 @@ let statWorld = statFunc(2160170, 145593);
 let statUSA = statFunc(671425, 33286);
 let statItaly = statFunc(168941, 22170);
 
+let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
 let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
 let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
@@ -156,7 +157,7 @@ render = () => {
 <span class="color-number">${deaths}</span><span class="color-number">${statRussia}%</span>
 </div>
 <div>
-<span class="color-number">${sverdlRegion}</span><span class="color-number">${sverdlRegionDeaths}</span><span class="color-number">${statSverdlRegionDeaths}%</span><span class="color-number recovered_color">${sverdlRegionRecovered}</span>
+<span class="color-number">${sverdlRegion}</span><span class="color-number">${sverdlRegionDeaths}</span><span class="color-number">${statSverdlRegionDeaths}%</span><span class="color-number recovered_color">${sverdlRegionRecovered}</span><span class="color-number recovered_color">${sverdlRegionRecoverPerent}%</span>
 </div>
 <div>
 <span class="color-number">${active}</span> 
