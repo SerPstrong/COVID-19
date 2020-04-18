@@ -5,9 +5,9 @@ let recovered = 3057; //выздоровлений
 let deaths = 313; // смертей
 let sverdlRegion = 126;
 let sverdlRegionRecovered = 49;
-let statWorld = statFunc(2160170, 145593);
-let statUSA = statFunc(671425, 33286);
-let statItaly = statFunc(168941, 22170);
+let statWorld = statFunc(2256844, 154350);
+let statUSA = statFunc(706779, 37079);
+let statItaly = statFunc(172434, 22745);
 let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
 
 let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
