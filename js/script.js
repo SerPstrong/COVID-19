@@ -6,9 +6,9 @@ let deaths = 405; // смертей
 let sverdlRegion = 149;
 let sverdlRegionRecovered = 52;
 let sverdlRegionDeaths = 1;
-let statWorld = statFunc(2331099, 160952);
-let statUSA = statFunc(735287, 39090);
-let statItaly = statFunc(175925, 23227);
+let statWorld = statFunc(2406745, 165273);
+let statUSA = statFunc(759766, 40683);
+let statItaly = statFunc(178972, 23660);
 
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
