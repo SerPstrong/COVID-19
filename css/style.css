@@ -173,6 +173,7 @@ body::before {
     z-index: 1;
     left: 8px;
     font-size: 12px;
+    font-style: italic;
 }
 
 .recovered_color {
