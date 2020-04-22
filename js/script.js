@@ -29,6 +29,7 @@ let dif = 0;
 let numberOfDays7 = 7; // количество дней для среднего %
 let toDateCovid = new Date(2020, 2, 2);
 let toDateCovidFull = 0;
+let today = new Date().toLocaleDateString();
 
 Date.prototype.addDays = function (days) {
     let date = new Date(this.valueOf());
@@ -66,7 +67,7 @@ render = () => {
     }
     countHumansSum = Math.floor(countHumansSum / hCount);
 
-    let iToday = i - 1;
+    iToday = i - 1;
 
     resultCom += `<h1 class="h1">РнаОПД</h1>`;
     result.innerHTML += resultCom;
@@ -105,7 +106,6 @@ render = () => {
     }
 
     function sec() {
-        let today = new Date().toLocaleDateString();
         let todayTime = new Date().toLocaleTimeString();
 
         resultTop.innerHTML = `
@@ -227,3 +227,13 @@ function intervalVideo() {
 }
 
 intervalVideo();
+
+let pass;
+
+while (true) {
+    if (pass === today) {
+        break;
+    } else {
+        pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
+    }
+}
