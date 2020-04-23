@@ -373,6 +373,10 @@ body::before {
     margin: 100px 0 0 0;
 }
 
+#result_com_block {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #nubexVideo {
         left: -400px;

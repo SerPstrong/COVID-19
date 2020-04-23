@@ -73,6 +73,8 @@ render = () => {
 
     let humans = arrHumans[arrHumans.length - 1];
 
+    resultCom += `<div id="result_com_block">`
+
     for (; i <= 150; i++) {
         if (humans <= 9000000000) {
             dif = humans;
@@ -87,7 +89,7 @@ render = () => {
             }
         }
     }
-
+    resultCom += `</div>`
     result.innerHTML = resultCom;
 
     function resultFunc(x) {
@@ -227,12 +229,12 @@ function intervalVideo() {
 
 intervalVideo();
 
-let pass;
-
-while (true) {
-    if (pass === today) {
-        break;
-    } else {
-        pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
-    }
-}
+// let pass;
+//
+// while (true) {
+//     if (pass === today) {
+//         break;
+//     } else {
+//         pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
+//     }
+// }
