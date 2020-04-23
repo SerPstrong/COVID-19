@@ -55,18 +55,22 @@ body::before {
     text-shadow: 1px 1px 1px #fff;
 }
 
+.h1:hover {
+    cursor: pointer;
+}
+
 .fa-arrow-up {
-    font-size: 44px;
+    font-size: 16px;
     color: #ff0061;
 }
 
 .fa-arrow-down {
-    font-size: 44px;
+    font-size: 16px;
     color: #ff006178;;
 }
 
 .fa-arrow-right {
-    font-size: 44px;
+    font-size: 16px;
     color: #ff006178;;
 }
 
