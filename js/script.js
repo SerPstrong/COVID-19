@@ -68,7 +68,7 @@ render = () => {
 
     iToday = i - 1;
 
-    resultCom += `<h1 class="h1">РнаОПД</h1>`;
+    resultCom += `<h1 class="h1">РнаОПД</h1><button id="but_close_stat">Закрытая статистика</button>`;
     result.innerHTML += resultCom;
 
     let humans = arrHumans[arrHumans.length - 1];
@@ -229,12 +229,20 @@ function intervalVideo() {
 
 intervalVideo();
 
-// let pass;
-//
-// while (true) {
-//     if (pass === today) {
-//         break;
-//     } else {
-//         pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
-//     }
-// }
+let butCloseStat = document.querySelector("#but_close_stat");
+let butOpenStat = document.querySelector("#result_com_block");
+let pass;
+
+butCloseStat.onclick = function () {
+    if (pass !== today) {
+        while (true) {
+            if (pass === today) {
+                butOpenStat.style.display = 'block';
+                butCloseStat.style.display = 'none';
+                break;
+            } else {
+                pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
+            }
+        }
+    }
+};
