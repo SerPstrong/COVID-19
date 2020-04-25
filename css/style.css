@@ -216,7 +216,7 @@ body::before {
 
 .span-flex {
     display: flex;
-    width: 33%;
+    /*width: 33%;*/
     flex-grow: 010;
     /*background-color: #3a3a3a;*/
     /*border: solid 1px;*/

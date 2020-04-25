@@ -54,7 +54,7 @@ render = () => {
         compare = arrHumans[i];
         funcIResult();
         //resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
-        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]} (+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
+        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]}(+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
     }
 
     let countHumansSum = 0;
