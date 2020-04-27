@@ -1,15 +1,15 @@
 const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 114, 147, 199, 253, 306, 367,
     438, 495, 658, 840, 1036, 1264, 1534, 1836, 2337, 2777, 3548, 4149, 4731, 5389, 6343, 7497,
     8672, 10131, 11917, 13584, 15770, 18328, 21102, 24490, 27938, 31989, 36793,
-    42853, 47121, 52763, 57999, 62773, 68622, 74588, 80949];
-let recovered = 6767; //выздоровлений
-let deaths = 747; // смертей
-let sverdlRegion = 395;
-let sverdlRegionRecovered = 87;
+    42853, 47121, 52763, 57999, 62773, 68622, 74588, 80949, 87147];
+let recovered = 7346; //выздоровлений
+let deaths = 795; // смертей
+let sverdlRegion = 454;
+let sverdlRegionRecovered = 88;
 let sverdlRegionDeaths = 1;
-let statWorld = statFunc(2824261, 202345);
-let statUSA = statFunc(939249, 53934);
-let statItaly = statFunc(195351, 26384);
+let statWorld = statFunc(2890742, 205793);
+let statUSA = statFunc(965933, 54877);
+let statItaly = statFunc(197675, 26644);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
 let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
