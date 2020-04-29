@@ -4,8 +4,8 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     42853, 47121, 52763, 57999, 62773, 68622, 74588, 80949, 87147, 93558, 99399];
 let recovered = 10286; //выздоровлений
 let deaths = 972; // смертей
-let sverdlRegion = 539;
-let sverdlRegionRecovered = 88;
+let sverdlRegion = 629;
+let sverdlRegionRecovered = 96;
 let sverdlRegionDeaths = 1;
 let statWorld = statFunc(2954402, 210398);
 let statUSA = statFunc(988469, 56253);
