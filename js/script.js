@@ -236,7 +236,6 @@ let butOpenStat = document.querySelector("#result_com_block");
 let pass;
 
 butCloseStat.onclick = function () {
-    console.log("111111111111111")
     if (pass !== today) {
         while (true) {
             if (pass === today) {
