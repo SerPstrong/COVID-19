@@ -78,7 +78,7 @@ render = () => {
 
     resultCom += `<div id="result_com_block">`
 
-    for (; i <= 170; i++) {
+    for (; i <= 270; i++) {
         if (humans <= 9000000000) {
             dif = humans;
             humans += resultFunc(humans);
