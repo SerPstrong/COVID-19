@@ -244,7 +244,7 @@ butCloseStat.onclick = function () {
                 butOpenStat.style.display = 'block';
                 break;
             } else {
-                pass = prompt("Введите пароль к закрытой статистике. Запросить пароль можно в телеграм: @SerPstrong");
+                pass = prompt("Введите пароль к закрытой статистике");
             }
         }
     }
