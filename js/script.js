@@ -9,10 +9,10 @@ let deaths = 2631; // смертей
 let sverdlRegion = 2731;
 let sverdlRegionRecovered = 610;
 let sverdlRegionDeaths = 6;
-let statWorld = statFunc(4105300, 294986);
-let statUSA = statFunc(1390764, 84136);
-let statSpain = statFunc(228691, 27104);
-let statItaly = statFunc(222104, 31106);
+let statWorld = statFunc(4362606, 309253);
+let stat1 = statFunc(1467884, 88754);
+let stat2 = statFunc(241461, 34546);
+let stat3 = statFunc(233511, 15662);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
 let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
@@ -171,7 +171,7 @@ render = () => {
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
 </div>
 <div>
-<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${statUSA}%</span><span class="color-number">Sp ${statSpain}%</span><span class="color-number">IT ${statItaly}%</span>
+<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${stat1}%</span><span class="color-number">Br ${stat2}%</span><span class="color-number">Braz ${stat3}%</span>
 </div>
 </div>`;
 
