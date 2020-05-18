@@ -3,19 +3,19 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     8672, 10131, 11917, 13584, 15770, 18328, 21102, 24490, 27938, 31989, 36793,
     42853, 47121, 52763, 57999, 62773, 68622, 74588, 80949, 87147, 93558, 99399,
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
-    209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752,290678];
+    209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678];
 let recovered = 70209; //выздоровлений
 let deaths = 2722; // смертей
 let sverdlRegion = 2861;
 let sverdlRegionRecovered = 630;
 let sverdlRegionDeaths = 6;
-let statWorld = statFunc(4433784, 312599);
-let stat1 = statFunc(1486742, 89564);
-let stat2 = statFunc(244995, 34716);
-let stat3 = statFunc(241080, 16122);
+let statWorld = statFunc("world ", 4433784, 312599);
+let stat1 = statFunc("usa ", 1486742, 89564);
+let stat2 = statFunc("british ", 244995, 34716);
+let stat3 = statFunc("brazilian ", 241080, 16122);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
-let statSverdlRegionDeaths = statFunc(sverdlRegion, sverdlRegionDeaths);
-let statRussia = statFunc(arrHumans[arrHumans.length - 1], deaths);
+let statSverdlRegionDeaths = statFunc("", sverdlRegion, sverdlRegionDeaths);
+let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths);
 let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
 let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
 const arrComparePercent = [];
@@ -40,8 +40,8 @@ Date.prototype.addDays = function (days) {
     return date;
 };
 
-function statFunc(theNumberOfInfected, dead) {
-    return (dead / (theNumberOfInfected / 100)).toFixed(1)
+function statFunc(country, theNumberOfInfected, dead) {
+    return (country + (dead / (theNumberOfInfected / 100)).toFixed(1))
 }
 
 function recoverFunc(x, y) {
@@ -57,7 +57,20 @@ render = () => {
         compare = arrHumans[i];
         funcIResult();
         //resultCom += `<div class="resBlock">День <span class="color-number">${i}</span> Заражений <span class="color-number">${arrHumans[i]} (+${difference})</span>   <span class="color-number">${iResult} ${difference2}%</span></div>`;
-        resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">${arrHumans[i]}(+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">${iResult} ${difference2}%</span></div></div>`;
+
+        // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">
+        // ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">
+        // ${arrHumans[i]}(+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">
+        // ${iResult} ${difference2}%</span></div></div>`;
+
+        // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">
+        // ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span></div><div class="span-flex"><span class="color-number color-number_size">
+        // ${arrHumans[i]}(+${difference})</span></div><div class="span-flex"><span class="color-number color-number_size">
+        // ${iResult} ${difference2}%</span></div></div>`;
+
+        resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">
+        ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
+        ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">${iResult}${difference}</span></div>`;
     }
 
     let countHumansSum = 0;
@@ -85,7 +98,9 @@ render = () => {
             humans += resultFunc(humans);
             let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
-            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
+            resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">
+${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
+${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
@@ -171,7 +186,7 @@ render = () => {
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
 </div>
 <div>
-<span class="color-number">W ${statWorld}%</span><span class="color-number">USA ${stat1}%</span><span class="color-number">Br ${stat2}%</span><span class="color-number">Braz ${stat3}%</span>
+<span class="color-number">${statWorld}%</span><span class="color-number">${stat1}%</span><span class="color-number">${stat2}%</span><span class="color-number">${stat3}%</span>
 </div>
 </div>`;
 

@@ -86,7 +86,7 @@ body::before {
 
 .i-fa-speed {
     animation: blink 1000ms reverse infinite;
-    position: inherit;
+    position: relative;
 }
 
 /*@keyframes blink {*/
@@ -195,6 +195,7 @@ body::before {
 
 .color-number_bot {
     padding: 20px;
+    min-width: 32px;
 }
 
 .block_share {
