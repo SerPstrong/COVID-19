@@ -70,7 +70,7 @@ render = () => {
 
         resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">
         ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
-        ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">${iResult}${difference}</span></div>`;
+        ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${difference} ${iResult}${difference2}%</span></div>`;
     }
 
     let countHumansSum = 0;
