@@ -52,7 +52,7 @@ render = () => {
     // resultCom += `<div class="resBlock result"><div class="span-flex"><span class="color-number color-number_size">Д.</span></div><div class="span-flex"><span class="color-number color-number_size">Зар.</span></div><div class="span-flex"><span class="color-number color-number_size">%</span></div></div>`;
     for (; i < arrHumans.length; i++) {
         difference = arrHumans[i] - compare;
-        difference2 = Math.floor(100 / compare * difference);
+        difference2 = (100 / compare * difference);
         arrComparePercent.push(difference2);
         compare = arrHumans[i];
         funcIResult();
@@ -70,7 +70,7 @@ render = () => {
 
         resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">
         ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
-        ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${difference} ${iResult}${difference2}%</span></div>`;
+        ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${difference} ${iResult}${difference2.toFixed(1)}%</span></div>`;
     }
 
     let countHumansSum = 0;
@@ -81,7 +81,7 @@ render = () => {
         countHumansSum += arrComparePercent[arrComparePercent.length - countHuSum];
         countHuSum++
     }
-    countHumansSum = Math.floor(countHumansSum / hCount);
+    countHumansSum = (countHumansSum / hCount).toFixed(1);
 
     iToday = i - 1;
 
@@ -92,15 +92,16 @@ render = () => {
 
     resultCom += `<div id="result_com_block">`
 
-    for (; i <= 370; i++) {
-        if (humans <= 9000000000) {
+    for (; i <= 470; i++) {
+        console.log(i)
+        if (humans <= 19000000000) {
             dif = humans;
             humans += resultFunc(humans);
             let y = Math.floor(humans);
             dif = Math.floor(humans - dif);
             resultCom += `<div class="resBlock resBlock_abs"><span class="color-number_small" title="Дата">
-${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
-${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
+            ${toDateCovid.addDays(i - 1).toLocaleDateString()}</span><span class="color-number color-number_bot" title="кол-во зараженных">
+            ${y}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${dif}</span></div>`;
 
             if (y > 140000000 && leftBeforeInfection === 0) {
                 leftBeforeInfection = i - iToday;
