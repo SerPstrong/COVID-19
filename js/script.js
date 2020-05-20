@@ -94,7 +94,6 @@ render = () => {
     resultCom += `<div id="result_com_block">`
 
     for (; i <= 452; i++) {
-        console.log(i)
         if (humans <= 19000000000) {
             dif = humans;
             humans += resultFunc(humans);
@@ -167,7 +166,7 @@ render = () => {
 </span> <span class="color-number">${todayTime}</span>
 </div>
 <div>
-<span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span><span class="color-number">${iResult} ${difference2}%</span>
+<span class="color-number">${arrHumans[arrHumans.length - 1]} (+${difference})</span><span class="color-number">${iResult} ${difference2.toFixed(1)}%</span>
 </div>
 <div>
 <span class="color-number">${countHumansSum}%</span>
@@ -188,13 +187,14 @@ render = () => {
 <span class="color-number">${leftBeforeInfection}</span><span class="color-number">${toDateCovidFull}</span>
 </div>
 <div>
-<span class="color-number">${statWorld}%</span><span class="color-number">${stat1}%</span><span class="color-number">${stat2}%</span><span class="color-number">${stat3}%</span>
+<span class="color-number"><span class="color-number__span-flex">${statWorld}%</span></span><span class="color-number"><span class="color-number__span-flex">${stat1}%</span></span><span class="color-number"><span class="color-number__span-flex">${stat2}%</span></span><span class="color-number"><span class="color-number__span-flex">${stat3}%</span></span>
 </div>
 </div>`;
 
     }
 
-    setInterval(sec, 1000);
+    // setInterval(sec, 1000);
+    sec();
 };
 render();
 
