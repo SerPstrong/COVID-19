@@ -3,17 +3,17 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     8672, 10131, 11917, 13584, 15770, 18328, 21102, 24490, 27938, 31989, 36793,
     42853, 47121, 52763, 57999, 62773, 68622, 74588, 80949, 87147, 93558, 99399,
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
-    209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941
+    209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941,
     308705];
 let recovered = 85392; //выздоровлений
 let deaths = 2972; // смертей
 let sverdlRegion = 3134;
 let sverdlRegionRecovered = 890;
 let sverdlRegionDeaths = 8;
-let statWorld = statFunc("world ", 4513855, 315824);
-let stat1 = statFunc("usa ", 1508957, 90369);
-let stat2 = statFunc("brazilian ", 255368, 16853);
-let stat3 = statFunc("british ", 247709, 34876);
+let statWorld = statFunc("world ", 4599291, 320523);
+let stat1 = statFunc("usa ", 1528661, 91938);
+let stat2 = statFunc("brazilian ", 271885, 17983);
+let stat3 = statFunc("british ", 250138, 35422);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc("", sverdlRegion, sverdlRegionDeaths);
 let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths);
