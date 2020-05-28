@@ -74,6 +74,8 @@ render = () => {
         ${arrHumans[i]}</span><span class="color-number_small_bottom-right" title="кол-во человек за сутки">+${difference} ${iResult}${difference2.toFixed(1)}%</span></div>`;
     }
 
+    resultCom += `<iframe src="http://www.gorses.na4u.ru/map.html" width="100%" height="820" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>`;
+
     let countHumansSum = 0;
     let hCount = 0;
     let countHuSum = 1;
