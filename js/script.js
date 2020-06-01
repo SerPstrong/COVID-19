@@ -5,12 +5,12 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
     209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941,
     308705, 317554, 326448, 335882, 344481, 353427, 362342, 370680, 379051, 387623, 396575,
-    405843];
-let recovered = 171883; //выздоровлений
-let deaths = 4693; // смертей
-let sverdlRegion = 5449;
-let sverdlRegionRecovered = 2173;
-let sverdlRegionDeaths = 27;
+    405843, 414878];
+let recovered = 175877; //выздоровлений
+let deaths = 4855; // смертей
+let sverdlRegion = 5732;
+let sverdlRegionRecovered = 2337;
+let sverdlRegionDeaths = 29;
 let statWorld = statFunc("world ", 5665529, 364644);
 let stat1 = statFunc("usa ", 1770384, 103781);
 let stat2 = statFunc("brazilian ", 498440, 28834);
