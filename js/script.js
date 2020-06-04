@@ -5,21 +5,21 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
     209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941,
     308705, 317554, 326448, 335882, 344481, 353427, 362342, 370680, 379051, 387623, 396575,
-    405843, 414878, 423741, 432277];
-let recovered = 195957;
-let deaths = 5215;
-let sverdlRegion = 6381;
-let sverdlRegionRecovered = 2680;
-let sverdlRegionDeaths = 33;
-let statWorld = statFunc("world ", 5957939, 375245);
-let stat1 = statFunc("usa ", 1831821, 106181);
-let stat2 = statFunc("brazilian ", 555383, 31199);
-let stat3 = statFunc("british ", 279392, 39452);
+    405843, 414878, 423741, 432277, 441108];
+let recovered = [195957, 204623];
+let deaths = 5384;
+let sverdlRegion = 6679;
+let sverdlRegionRecovered = 2827;
+let sverdlRegionDeaths = 35;
+let statWorld = statFunc("world ", 6079881, 380848);
+let stat1 = statFunc("usa ", 1851520, 107175);
+let stat2 = statFunc("brazilian ", 584016, 32548);
+let stat3 = statFunc("british ", 281270, 39811);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
 let statSverdlRegionDeaths = statFunc("", sverdlRegion, sverdlRegionDeaths);
 let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths);
-let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered);
-let active = arrHumans[arrHumans.length - 1] - recovered - deaths;
+let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered[recovered.length - 1]);
+let active = arrHumans[arrHumans.length - 1] - recovered[recovered.length - 1] - deaths;
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
 let result = document.getElementById("result");
@@ -175,7 +175,7 @@ render = () => {
 <span class="color-number">${countHumansSum}%</span>
 </div>
 <div>
-<span class="color-number recovered_color">${recovered}</span><span class="color-number recovered_color">${recoverPercent}%</span>  
+<span class="color-number recovered_color">${recovered[recovered.length - 1]}(+${recovered[recovered.length - 1]-recovered[recovered.length - 2]})</span><span class="color-number recovered_color">${recoverPercent}%</span>  
 </div>
 <div>
 <span class="color-number">${deaths}</span><span class="color-number">${statRussia}%</span>
