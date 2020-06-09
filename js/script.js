@@ -5,21 +5,21 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
     209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941,
     308705, 317554, 326448, 335882, 344481, 353427, 362342, 370680, 379051, 387623, 396575,
-    405843, 414878, 423741, 432277, 441108, 449834, 458689, 467673, 476658];
-let recovered = [195957, 204623, 212680, 221388, 226731, 230688];
-let deaths = 5971;
-let sverdlRegion = 7668;
-let sverdlRegionRecovered = 3273;
-let sverdlRegionDeaths = 43;
+    405843, 414878, 423741, 432277, 441108, 449834, 458689, 467673, 476658, 485253];
+const recovered = [195957, 204623, 212680, 221388, 226731, 230688, 242397];
+const deaths = [5971, 6141];
+const sverdlRegion = [7668, 7910];
+const sverdlRegionDeaths = [43, 46];
+const sverdlRegionRecovered = [3273, 3495];
 let statWorld = statFunc("world ", 6437741, 394060);
 let stat1 = statFunc("usa ", 1920061, 109802);
 let stat2 = statFunc("brazilian ", 672846, 35930);
 let stat3 = statFunc("british ", 286294, 40548);
-let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion, sverdlRegionRecovered);
-let statSverdlRegionDeaths = statFunc("", sverdlRegion, sverdlRegionDeaths);
-let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths);
+let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion[sverdlRegion.length - 1], sverdlRegionRecovered[sverdlRegionRecovered.length - 1]);
+let statSverdlRegionDeaths = statFunc("", sverdlRegion[sverdlRegion.length - 1], sverdlRegionDeaths[sverdlRegionDeaths.length - 1]);
+let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths[deaths.length - 1]);
 let recoverPercent = recoverFunc(arrHumans[arrHumans.length - 1], recovered[recovered.length - 1]);
-let active = arrHumans[arrHumans.length - 1] - recovered[recovered.length - 1] - deaths;
+let active = arrHumans[arrHumans.length - 1] - recovered[recovered.length - 1] - deaths[deaths.length - 1];
 const arrComparePercent = [];
 let leftBeforeInfection = 0;
 let result = document.getElementById("result");
@@ -175,13 +175,13 @@ render = () => {
 <span class="color-number">${countHumansSum}%</span>
 </div>
 <div>
-<span class="color-number recovered_color">${recovered[recovered.length - 1]}(+${recovered[recovered.length - 1]-recovered[recovered.length - 2]})</span><span class="color-number recovered_color">${recoverPercent}%</span>  
+<span class="color-number recovered_color">${recovered[recovered.length - 1]}(+${recovered[recovered.length - 1] - recovered[recovered.length - 2]})</span><span class="color-number recovered_color">${recoverPercent}%</span>  
 </div>
 <div>
-<span class="color-number">${deaths}</span><span class="color-number">${statRussia}%</span>
+<span class="color-number">${deaths[deaths.length - 1]}(+${deaths[deaths.length - 1] - deaths[deaths.length - 2]})</span><span class="color-number">${statRussia}%</span>
 </div>
 <div>
-<span class="color-number">${sverdlRegion}</span><span class="color-number">${sverdlRegionDeaths}</span><span class="color-number">${statSverdlRegionDeaths}%</span><span class="color-number recovered_color">${sverdlRegionRecovered}</span><span class="color-number recovered_color">${sverdlRegionRecoverPerent}%</span>
+<span class="color-number">${sverdlRegion[sverdlRegion.length - 1]}(+${sverdlRegion[sverdlRegion.length - 1] - sverdlRegion[sverdlRegion.length - 2]})</span><span class="color-number">${sverdlRegionDeaths[sverdlRegionDeaths.length - 1]}(+${sverdlRegionDeaths[sverdlRegionDeaths.length - 1] - sverdlRegionDeaths[sverdlRegionDeaths.length - 2]})</span><span class="color-number">${statSverdlRegionDeaths}%</span><span class="color-number recovered_color">${sverdlRegionRecovered[sverdlRegionRecovered.length - 1]}(+${sverdlRegionRecovered[sverdlRegionRecovered.length - 1] - sverdlRegionRecovered[sverdlRegionRecovered.length - 2]})</span><span class="color-number recovered_color">${sverdlRegionRecoverPerent}%</span>
 </div>
 <div>
 <span class="color-number">${active}</span> 
