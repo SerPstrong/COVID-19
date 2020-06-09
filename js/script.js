@@ -196,8 +196,7 @@ render = () => {
 
     }
 
-    // setInterval(sec, 1000);
-    sec();
+    setInterval(sec, 1000);
 };
 render();
 
