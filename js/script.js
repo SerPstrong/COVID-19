@@ -5,12 +5,13 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     106498, 114431, 124054, 134687, 145268, 155370, 165929, 177160, 187859, 198676,
     209688, 221344, 232243, 242271, 252245, 262843, 272043, 281752, 290678, 299941,
     308705, 317554, 326448, 335882, 344481, 353427, 362342, 370680, 379051, 387623, 396575,
-    405843, 414878, 423741, 432277, 441108, 449834, 458689, 467673, 476658, 485253];
-const recovered = [195957, 204623, 212680, 221388, 226731, 230688, 242397];
-const deaths = [5971, 6141];
-const sverdlRegion = [7668, 7910];
-const sverdlRegionDeaths = [43, 46];
-const sverdlRegionRecovered = [3273, 3495];
+    405843, 414878, 423741, 432277, 441108, 449834, 458689, 467673, 476658, 485253,
+493657];
+const recovered = [195957, 204623, 212680, 221388, 226731, 230688, 242397, 252783];
+const deaths = [5971, 6141, 6358];
+const sverdlRegion = [7668, 7910, 8194];
+const sverdlRegionRecovered = [3273, 3495, 3642];
+const sverdlRegionDeaths = [43, 46, 48];
 let statWorld = statFunc("world ", 6437741, 394060);
 let stat1 = statFunc("usa ", 1920061, 109802);
 let stat2 = statFunc("brazilian ", 672846, 35930);
@@ -203,7 +204,6 @@ render();
 let backVideo = document.getElementById("nubexDiv");
 let intFlag = 1;
 let setInt;
-
 
 function intervalVideo() {
     if (intFlag === 1) {
