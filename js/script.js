@@ -7,20 +7,21 @@ const arrHumans = [" ", 1, 1, 1, 1, 7, 11, 14, 17, 20, 28, 34, 45, 59, 63, 93, 1
     308705, 317554, 326448, 335882, 344481, 353427, 362342, 370680, 379051, 387623, 396575,
     405843, 414878, 423741, 432277, 441108, 449834, 458689, 467673, 476658, 485253,
     493657, 502436, 511423, 520129, 528964, 537210, 545458, 553301, 561091, 569063,
-    576952, 584680, 592280];
+    576952, 584680, 592280,599705,606881,613994,620794,627646,634437,641156,647849,654405];
 const recovered = [195957, 204623, 212680, 221388, 226731, 230688, 242397, 252783,
-    261150, 269370, 274641, 280050, 284539, 294306, 304342, 313963, 339711, 344416];
+    261150, 269370, 274641, 280050, 284539, 294306, 304342, 313963, 339711, 344416,
+420000,422931];
 const deaths = [5971, 6141, 6358, 6532, 6715, 6829, 6948, 7091, 7284, 7478, 7660, 8111,
-    8206];
+    8206,9536];
 const sverdlRegion = [7668, 7910, 8194, 8506, 8826, 9071, 9325, 9558, 9789, 10016,
-    10247, 10725, 11129];
+    10247, 10725, 11129,12800,13048];
 const sverdlRegionRecovered = [3273, 3495, 3642, 3790, 3912, 4021, 4144, 4235, 4469,
-    4657, 4853, 5496, 5566];
-const sverdlRegionDeaths = [43, 46, 48, 48, 48, 50, 50, 50, 54, 57, 60, 70, 71];
-let statWorld = statFunc("world ", 8367327, 460216);
-let stat1 = statFunc("usa ", 2280969, 119977);
-let stat2 = statFunc("brazilian ", 1083341, 50591);
-let stat3 = statFunc("india ", 425282, 13699);
+    4657, 4853, 5496, 5566,7500,7614];
+const sverdlRegionDeaths = [43, 46, 48, 48, 48, 50, 50, 50, 54, 57, 60, 70, 71,99,101];
+let statWorld = statFunc("world ", 9825810, 4940741);
+let stat1 = statFunc("usa ", 2636538, 127425);
+let stat2 = statFunc("brazilian ", 1402041, 59594);
+let stat3 = statFunc("india ", 585481, 9536);
 let sverdlRegionRecoverPerent = recoverFunc(sverdlRegion[sverdlRegion.length - 1], sverdlRegionRecovered[sverdlRegionRecovered.length - 1]);
 let statSverdlRegionDeaths = statFunc("", sverdlRegion[sverdlRegion.length - 1], sverdlRegionDeaths[sverdlRegionDeaths.length - 1]);
 let statRussia = statFunc("", arrHumans[arrHumans.length - 1], deaths[deaths.length - 1]);
